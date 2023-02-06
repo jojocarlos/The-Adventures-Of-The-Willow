@@ -1,0 +1,157 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &6991505792693010807
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 168922, guid: 3191436064bc7e04393a237d2bdcefbd, type: 3}
+      propertyPath: m_Name
+      value: WaterDynamics
+      objectReference: {fileID: 0}
+    - target: {fileID: 168922, guid: 3191436064bc7e04393a237d2bdcefbd, type: 3}
+      propertyPath: m_Layer
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 168922, guid: 3191436064bc7e04393a237d2bdcefbd, type: 3}
+      propertyPath: m_TagString
+      value: water
+      objectReference: {fileID: 0}
+    - target: {fileID: 417500, guid: 3191436064bc7e04393a237d2bdcefbd, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 417500, guid: 3191436064bc7e04393a237d2bdcefbd, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -34.78
+      objectReference: {fileID: 0}
+    - target: {fileID: 417500, guid: 3191436064bc7e04393a237d2bdcefbd, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.28
+      objectReference: {fileID: 0}
+    - target: {fileID: 417500, guid: 3191436064bc7e04393a237d2bdcefbd, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.33
+      objectReference: {fileID: 0}
+    - target: {fileID: 417500, guid: 3191436064bc7e04393a237d2bdcefbd, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 417500, guid: 3191436064bc7e04393a237d2bdcefbd, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 417500, guid: 3191436064bc7e04393a237d2bdcefbd, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 417500, guid: 3191436064bc7e04393a237d2bdcefbd, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2317636, guid: 3191436064bc7e04393a237d2bdcefbd, type: 3}
+      propertyPath: m_DynamicOccludee
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6167436, guid: 3191436064bc7e04393a237d2bdcefbd, type: 3}
+      propertyPath: m_Size.x
+      value: 26.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6167436, guid: 3191436064bc7e04393a237d2bdcefbd, type: 3}
+      propertyPath: m_Size.y
+      value: 10.92
+      objectReference: {fileID: 0}
+    - target: {fileID: 6167436, guid: 3191436064bc7e04393a237d2bdcefbd, type: 3}
+      propertyPath: m_Offset.x
+      value: 13.35
+      objectReference: {fileID: 0}
+    - target: {fileID: 6167436, guid: 3191436064bc7e04393a237d2bdcefbd, type: 3}
+      propertyPath: m_Offset.y
+      value: -5.58
+      objectReference: {fileID: 0}
+    - target: {fileID: 11482344, guid: 3191436064bc7e04393a237d2bdcefbd, type: 3}
+      propertyPath: width
+      value: 26.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 11482344, guid: 3191436064bc7e04393a237d2bdcefbd, type: 3}
+      propertyPath: height
+      value: 11.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 11482344, guid: 3191436064bc7e04393a237d2bdcefbd, type: 3}
+      propertyPath: UVDistort
+      value: 0.81
+      objectReference: {fileID: 0}
+    - target: {fileID: 11482344, guid: 3191436064bc7e04393a237d2bdcefbd, type: 3}
+      propertyPath: resolution
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 11482344, guid: 3191436064bc7e04393a237d2bdcefbd, type: 3}
+      propertyPath: sortingLayer
+      value: -1984823733
+      objectReference: {fileID: 0}
+    - target: {fileID: 11482344, guid: 3191436064bc7e04393a237d2bdcefbd, type: 3}
+      propertyPath: cacheCollider
+      value: 
+      objectReference: {fileID: 6991505792697604859}
+    - target: {fileID: 11482344, guid: 3191436064bc7e04393a237d2bdcefbd, type: 3}
+      propertyPath: forced.Array.data[0]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 11482344, guid: 3191436064bc7e04393a237d2bdcefbd, type: 3}
+      propertyPath: forced.Array.data[1]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 11482344, guid: 3191436064bc7e04393a237d2bdcefbd, type: 3}
+      propertyPath: forced.Array.data[2]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 11482344, guid: 3191436064bc7e04393a237d2bdcefbd, type: 3}
+      propertyPath: exitSounds.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11482344, guid: 3191436064bc7e04393a237d2bdcefbd, type: 3}
+      propertyPath: splashSounds.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11482344, guid: 3191436064bc7e04393a237d2bdcefbd, type: 3}
+      propertyPath: exitSounds.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 2e551ef2861d4e5458178abcd451787a, type: 3}
+    - target: {fileID: 11482344, guid: 3191436064bc7e04393a237d2bdcefbd, type: 3}
+      propertyPath: splashSounds.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: 2e551ef2861d4e5458178abcd451787a, type: 3}
+    m_RemovedComponents:
+    - {fileID: 25395596, guid: 3191436064bc7e04393a237d2bdcefbd, type: 3}
+  m_SourcePrefab: {fileID: 100100000, guid: 3191436064bc7e04393a237d2bdcefbd, type: 3}
+--- !u!1 &6991505792693113517 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 168922, guid: 3191436064bc7e04393a237d2bdcefbd, type: 3}
+  m_PrefabInstance: {fileID: 6991505792693010807}
+  m_PrefabAsset: {fileID: 0}
+--- !u!253 &2045006994
+BuoyancyEffector2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6991505792693113517}
+  m_Enabled: 1
+  m_UseColliderMask: 1
+  m_ColliderMask:
+    serializedVersion: 2
+    m_Bits: 3559
+  m_SurfaceLevel: 0
+  m_Density: 0
+  m_LinearDrag: 0
+  m_AngularDrag: 0
+  m_FlowAngle: 0
+  m_FlowMagnitude: 0
+  m_FlowVariation: 0
+--- !u!61 &6991505792697604859 stripped
+BoxCollider2D:
+  m_CorrespondingSourceObject: {fileID: 6167436, guid: 3191436064bc7e04393a237d2bdcefbd, type: 3}
+  m_PrefabInstance: {fileID: 6991505792693010807}
+  m_PrefabAsset: {fileID: 0}

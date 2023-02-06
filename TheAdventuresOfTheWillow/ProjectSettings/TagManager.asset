@@ -1,0 +1,152 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Box
+  - Checkpoint
+  - enemy
+  - hp_barra
+  - Chance_texto_tag
+  - morte_imediata
+  - Teleporter
+  - MovingPlatform
+  - Thwomp
+  - ground
+  - water
+  - Pushable
+  - trampoline
+  - Ladder
+  - Win
+  - Stars
+  - Life
+  - Event
+  - forestGround
+  - desertGround
+  - finishPoint
+  - FishJump
+  - BigStump
+  - SmallStump
+  - Fireball
+  - PlayerFoots
+  - WeakPoint
+  - enemyTag
+  - BubblePower
+  - Keybind
+  - Wblock
+  - Laser
+  - BonusBlock
+  - EnemyPlatform
+  - CinemachineCamera
+  - Spirit
+  - BossEnter
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - Player
+  - Water
+  - UI
+  - Ground
+  - Grabable
+  - Back
+  - enemy
+  - fireball
+  - WaterFX
+  - FishJump
+  - No Post
+  - Powerup
+  - Bullet
+  - Thwomp
+  - UIParticles
+  - PlayerBubblePower
+  - Wblock
+  - Laser
+  - DistortionEffect
+  - BonusBlock
+  - WaterBack
+  - PlayerFoots
+  - Boss
+  - GroundPlatform
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Back
+    uniqueID: 2742626497
+    locked: 0
+  - name: back_Para_01
+    uniqueID: 1468038599
+    locked: 0
+  - name: Trees1
+    uniqueID: 3293307367
+    locked: 0
+  - name: Trees
+    uniqueID: 441670063
+    locked: 0
+  - name: Leafs2
+    uniqueID: 2374288795
+    locked: 0
+  - name: Leafs
+    uniqueID: 3459396189
+    locked: 0
+  - name: Leafs3
+    uniqueID: 4015980731
+    locked: 0
+  - name: WaterFX
+    uniqueID: 1415199055
+    locked: 0
+  - name: Caustics
+    uniqueID: 1798276521
+    locked: 0
+  - name: BackDecor
+    uniqueID: 3886199881
+    locked: 0
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Fire
+    uniqueID: 414468687
+    locked: 0
+  - name: FrontDecor
+    uniqueID: 4039822117
+    locked: 0
+  - name: Powerups
+    uniqueID: 2284329879
+    locked: 0
+  - name: Enemies
+    uniqueID: 3554474533
+    locked: 0
+  - name: Player
+    uniqueID: 4189357105
+    locked: 0
+  - name: Lasers
+    uniqueID: 4228470321
+    locked: 0
+  - name: ForeDecor
+    uniqueID: 491977653
+    locked: 0
+  - name: LampUI
+    uniqueID: 654792667
+    locked: 0
+  - name: DistortionLayer
+    uniqueID: 3433555083
+    locked: 0
+  - name: WaterDynamics
+    uniqueID: 2310143563
+    locked: 0
+  - name: WaterBorders
+    uniqueID: 4234304313
+    locked: 0
+  - name: FrontGround
+    uniqueID: 12946675
+    locked: 0
+  - name: Front_01
+    uniqueID: 3094129717
+    locked: 0
+  - name: FrontCamera
+    uniqueID: 864056735
+    locked: 0

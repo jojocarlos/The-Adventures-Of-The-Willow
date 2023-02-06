@@ -1,0 +1,17 @@
+Foliage 2D v1.4
+Minimum Unity version supported - 2017.4
+
+1.4
+- Fixed bug a that caused the inspector to lag when selecting a foliage prefab in the Project window.
+
+1.3
+- Added support for the newest version of Unity.
+- Removed support for Unity versions that are older than Unity 2017.4. 
+
+1.2
+- Added support for the newest version of Unity.
+- Changed from paid to free.
+- Removed support for Unity versions that are older than Unity 5.6. 
+
+1.1
+- An error is no longer generated in Unity 5.4.

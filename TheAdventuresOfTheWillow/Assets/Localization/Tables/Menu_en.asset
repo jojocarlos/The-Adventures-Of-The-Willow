@@ -1,0 +1,148 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: Menu_en
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: en
+  m_SharedData: {fileID: 11400000, guid: 0a05fe64be27bd348bf80244904fbd43, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 27564138496
+    m_Localized: Graphics
+    m_Metadata:
+      m_Items: []
+  - m_Id: 93674758144
+    m_Localized: FullScreen
+    m_Metadata:
+      m_Items: []
+  - m_Id: 208963592192
+    m_Localized: Music
+    m_Metadata:
+      m_Items: []
+  - m_Id: 303515787264
+    m_Localized: SFX
+    m_Metadata:
+      m_Items: []
+  - m_Id: 335775962759168
+    m_Localized: 'Coins: '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 335850210328576
+    m_Localized: Deaths
+    m_Metadata:
+      m_Items: []
+  - m_Id: 335943458095104
+    m_Localized: Back
+    m_Metadata:
+      m_Items: []
+  - m_Id: 335976676982784
+    m_Localized: New Game
+    m_Metadata:
+      m_Items: []
+  - m_Id: 336032125681664
+    m_Localized: Continue
+    m_Metadata:
+      m_Items: []
+  - m_Id: 336157837361152
+    m_Localized: Load Game
+    m_Metadata:
+      m_Items: []
+  - m_Id: 336236388286464
+    m_Localized: Delete Slot
+    m_Metadata:
+      m_Items: []
+  - m_Id: 337421052674048
+    m_Localized: Empty
+    m_Metadata:
+      m_Items: []
+  - m_Id: 339041517830144
+    m_Localized: Start
+    m_Metadata:
+      m_Items: []
+  - m_Id: 339089035100160
+    m_Localized: Event
+    m_Metadata:
+      m_Items: []
+  - m_Id: 339147050713088
+    m_Localized: Options
+    m_Metadata:
+      m_Items: []
+  - m_Id: 339191749410816
+    m_Localized: Credits
+    m_Metadata:
+      m_Items: []
+  - m_Id: 339218957860864
+    m_Localized: Quit
+    m_Metadata:
+      m_Items: []
+  - m_Id: 339847973437440
+    m_Localized: New Version Avaiable
+    m_Metadata:
+      m_Items: []
+  - m_Id: 339965921460224
+    m_Localized: Update
+    m_Metadata:
+      m_Items: []
+  - m_Id: 340033370062848
+    m_Localized: X
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1414846490042368
+    m_Localized: 'Note: The changed language is automatically saved.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2139959019659264
+    m_Localized: '!!!Do you want to reset all settings?. Don''t worry, your game
+      data will still be saved and untouched. This only resets the settings.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2141210461560832
+    m_Localized: Reset Settings
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2142212577255424
+    m_Localized: Are you sure you want to reset the settings?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2142320043712512
+    m_Localized: Yes
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2142359407255552
+    m_Localized: No
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2492104625577984
+    m_Localized: Extra Worlds
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2492202587742208
+    m_Localized: Daily Reward
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2502065711702016
+    m_Localized: Claim
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2504351976480768
+    m_Localized: You need to claim the reward first.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4676434215002112
+    m_Localized: Cancel
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []

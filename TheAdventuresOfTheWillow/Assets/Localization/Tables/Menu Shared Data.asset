@@ -1,0 +1,152 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
+  m_Name: Menu Shared Data
+  m_EditorClassIdentifier: 
+  m_TableCollectionName: Menu
+  m_TableCollectionNameGuidString: 0a05fe64be27bd348bf80244904fbd43
+  m_Entries:
+  - m_Id: 27564138496
+    m_Key: graphics
+    m_Metadata:
+      m_Items: []
+  - m_Id: 93674758144
+    m_Key: fullscreen
+    m_Metadata:
+      m_Items: []
+  - m_Id: 208963592192
+    m_Key: music
+    m_Metadata:
+      m_Items: []
+  - m_Id: 303515787264
+    m_Key: SFX
+    m_Metadata:
+      m_Items: []
+  - m_Id: 335775962759168
+    m_Key: Coin
+    m_Metadata:
+      m_Items: []
+  - m_Id: 335850210328576
+    m_Key: DeathCount
+    m_Metadata:
+      m_Items: []
+  - m_Id: 335943458095104
+    m_Key: Back
+    m_Metadata:
+      m_Items: []
+  - m_Id: 335976676982784
+    m_Key: New Game
+    m_Metadata:
+      m_Items: []
+  - m_Id: 336032125681664
+    m_Key: Continue
+    m_Metadata:
+      m_Items: []
+  - m_Id: 336157837361152
+    m_Key: Load Game
+    m_Metadata:
+      m_Items: []
+  - m_Id: 336236388286464
+    m_Key: Delete
+    m_Metadata:
+      m_Items: []
+  - m_Id: 337421052674048
+    m_Key: Empty
+    m_Metadata:
+      m_Items: []
+  - m_Id: 339041517830144
+    m_Key: Start
+    m_Metadata:
+      m_Items: []
+  - m_Id: 339089035100160
+    m_Key: Event
+    m_Metadata:
+      m_Items: []
+  - m_Id: 339147050713088
+    m_Key: Options
+    m_Metadata:
+      m_Items: []
+  - m_Id: 339191749410816
+    m_Key: Credits
+    m_Metadata:
+      m_Items: []
+  - m_Id: 339218957860864
+    m_Key: Quit
+    m_Metadata:
+      m_Items: []
+  - m_Id: 339847973437440
+    m_Key: New Version
+    m_Metadata:
+      m_Items: []
+  - m_Id: 339965921460224
+    m_Key: Update
+    m_Metadata:
+      m_Items: []
+  - m_Id: 340033370062848
+    m_Key: X
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1414846490042368
+    m_Key: Nota
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2139959019659264
+    m_Key: "Aviso resetar defini\xE7oes"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2141210461560832
+    m_Key: Reset Settings
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2142212577255424
+    m_Key: Confirmation reset settings
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2142320043712512
+    m_Key: Sim
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2142359407255552
+    m_Key: "N\xE3o"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2492104625577984
+    m_Key: Extra Worlds
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2492202587742208
+    m_Key: Rewards
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2502065711702016
+    m_Key: Claim
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2504351976480768
+    m_Key: ClaimMensage
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4676434215002112
+    m_Key: Cancel
+    m_Metadata:
+      m_Items: []
+  m_Metadata:
+    m_Items: []
+  m_KeyGenerator:
+    rid: 5813541825803714562
+  references:
+    version: 2
+    RefIds:
+    - rid: 5813541825803714562
+      type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables, asm: Unity.Localization}
+      data:
+        m_CustomEpoch: 1669320019380

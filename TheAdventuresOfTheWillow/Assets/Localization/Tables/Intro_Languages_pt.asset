@@ -1,0 +1,67 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: Intro_Languages_pt
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: pt
+  m_SharedData: {fileID: 11400000, guid: f0d08f07a1c44c04b96e8f3d3bf69022, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 116470800384
+    m_Localized: Era uma vez numa floresta encantada...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 460529557504
+    m_Localized: "Criaturas m\xEDsticas habitam nela..."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 695884537856
+    m_Localized: Todos amigos uns dos outros...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 713131515904
+    m_Localized: Mas Bardulf Odiava a alegria e a felicidade, e ele tornou uma maneira
+      de acabar com ela.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 728231010304
+    m_Localized: Willow e sua companheira Ellie viviam numa parte da floresta.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 994892275712
+    m_Localized: Viviam numa gruta.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 997169782784
+    m_Localized: "Um dia sua companheira foi raptada pelo malvado Bardulf, por ci\xFAmes
+      dela."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 998713286656
+    m_Localized: "E estranhamente as criaturas m\xEDsticas enfeiti\xE7adas se tornaram
+      malvados e come\xE7aram atacar o Willow."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1062835806208
+    m_Localized: Willow sabia quem foi.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1065117507584
+    m_Localized: Willow partiu em sua jornada para entrar nos bosques do Bardulf,
+      e salvar a sua companheira.
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []

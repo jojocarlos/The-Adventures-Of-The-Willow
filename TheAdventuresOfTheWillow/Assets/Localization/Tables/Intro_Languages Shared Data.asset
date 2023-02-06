@@ -1,0 +1,68 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
+  m_Name: Intro_Languages Shared Data
+  m_EditorClassIdentifier: 
+  m_TableCollectionName: Intro_Languages
+  m_TableCollectionNameGuidString: f0d08f07a1c44c04b96e8f3d3bf69022
+  m_Entries:
+  - m_Id: 116470800384
+    m_Key: TXT1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 460529557504
+    m_Key: TXT2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 695884537856
+    m_Key: TXT3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 713131515904
+    m_Key: TXT4
+    m_Metadata:
+      m_Items: []
+  - m_Id: 728231010304
+    m_Key: TXT5
+    m_Metadata:
+      m_Items: []
+  - m_Id: 994892275712
+    m_Key: TXT6
+    m_Metadata:
+      m_Items: []
+  - m_Id: 997169782784
+    m_Key: TXT7
+    m_Metadata:
+      m_Items: []
+  - m_Id: 998713286656
+    m_Key: TXT8
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1062835806208
+    m_Key: TXT10
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1065117507584
+    m_Key: TXT11
+    m_Metadata:
+      m_Items: []
+  m_Metadata:
+    m_Items: []
+  m_KeyGenerator:
+    rid: 3019007862037807128
+  references:
+    version: 2
+    RefIds:
+    - rid: 3019007862037807128
+      type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables, asm: Unity.Localization}
+      data:
+        m_CustomEpoch: 1667244083819

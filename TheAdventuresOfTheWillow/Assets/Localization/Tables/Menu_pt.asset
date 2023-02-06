@@ -1,0 +1,149 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: Menu_pt
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: pt
+  m_SharedData: {fileID: 11400000, guid: 0a05fe64be27bd348bf80244904fbd43, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 27564138496
+    m_Localized: "Gr\xE1ficos"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 93674758144
+    m_Localized: "Ecr\xE3 Inteiro"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 208963592192
+    m_Localized: "M\xFAsica"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 303515787264
+    m_Localized: SFX
+    m_Metadata:
+      m_Items: []
+  - m_Id: 335775962759168
+    m_Localized: ' Moedas: '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 335850210328576
+    m_Localized: Mortes
+    m_Metadata:
+      m_Items: []
+  - m_Id: 335943458095104
+    m_Localized: Voltar
+    m_Metadata:
+      m_Items: []
+  - m_Id: 335976676982784
+    m_Localized: Novo Jogo
+    m_Metadata:
+      m_Items: []
+  - m_Id: 336032125681664
+    m_Localized: Continuar
+    m_Metadata:
+      m_Items: []
+  - m_Id: 336157837361152
+    m_Localized: Carregar Jogo
+    m_Metadata:
+      m_Items: []
+  - m_Id: 336236388286464
+    m_Localized: ' Apagar Slote'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 337421052674048
+    m_Localized: Vazio
+    m_Metadata:
+      m_Items: []
+  - m_Id: 339041517830144
+    m_Localized: "Come\xE7ar"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 339089035100160
+    m_Localized: Evento
+    m_Metadata:
+      m_Items: []
+  - m_Id: 339147050713088
+    m_Localized: "Op\xE7\xF5es"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 339191749410816
+    m_Localized: Creditos
+    m_Metadata:
+      m_Items: []
+  - m_Id: 339218957860864
+    m_Localized: Sair
+    m_Metadata:
+      m_Items: []
+  - m_Id: 339847973437440
+    m_Localized: "Nova Vers\xE3o Dispon\xEDvel"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 339965921460224
+    m_Localized: Actualizar
+    m_Metadata:
+      m_Items: []
+  - m_Id: 340033370062848
+    m_Localized: X
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1414846490042368
+    m_Localized: 'Nota: O idioma mudado salva automaticamente.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2139959019659264
+    m_Localized: "!!!Deseja Resetar as defini\xE7\xF5es todas? N\xE3o se preocupe
+      os dados do jogo continuar\xE3o salvos e int\xE1cteis. Isto somente reseta
+      as defini\xE7\xF5es."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2141210461560832
+    m_Localized: "Resetar Defini\xE7\xF5es"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2142212577255424
+    m_Localized: "Tem a certeza que quer resetar as defini\xE7\xF5es?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2142320043712512
+    m_Localized: Sim
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2142359407255552
+    m_Localized: "N\xE3o"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2492104625577984
+    m_Localized: Mundos Extra
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2492202587742208
+    m_Localized: " Recompensa Di\xE1ria"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2502065711702016
+    m_Localized: Reivindicar
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2504351976480768
+    m_Localized: Precisa de reclamar a recompensa primeiro.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4676434215002112
+    m_Localized: Cancelar
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []

@@ -1,0 +1,58 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48fc2b81d0b92f540a718a3eb4b92c7c, type: 3}
+  m_Name: Hollow Knight Style
+  m_EditorClassIdentifier: 
+  gravityStrength: -52
+  gravityScale: 5.3007135
+  fallGravityMult: 1
+  maxFallSpeed: 18
+  fastFallGravityMult: 0.5
+  maxFastFallSpeed: 10
+  SwimGravity: 0.4
+  SwimSpeed: 5
+  RotationSpeed: 300
+  SwimForce: 50
+  runMaxSpeed: 9.5
+  runAcceleration: 9.5
+  runAccelAmount: 50
+  runDecceleration: 9.5
+  runDeccelAmount: 50
+  accelInAir: 1
+  deccelInAir: 1
+  doConserveMomentum: 0
+  jumpHeight: 6.5
+  jumpTimeToApex: 0.5
+  jumpForce: 26
+  jumpCutGravityMult: 3.5
+  jumpHangGravityMult: 1
+  jumpHangTimeThreshold: 0
+  jumpHangAccelerationMult: 1
+  jumpHangMaxSpeedMult: 1
+  wallJumpForce: {x: 8.5, y: 20}
+  wallJumpRunLerp: 0.075
+  wallJumpTime: 0.3
+  doTurnOnWallJump: 0
+  slideSpeed: 0.5
+  slideAccel: 5
+  coyoteTime: 0.2
+  jumpInputBufferTime: 0.2
+  dashAmount: 1
+  dashSpeed: 50
+  dashSleepTime: 0.05
+  dashAttackTime: 0.15
+  dashEndTime: 0.15
+  dashEndSpeed: {x: 40, y: 40}
+  dashEndRunLerp: 0.5
+  dashRefillTime: 0.1
+  dashInputBufferTime: 0.1
+  speedladder: 8

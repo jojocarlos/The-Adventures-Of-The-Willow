@@ -1,0 +1,44 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Menu/Menu/SplashScreen.unity
+    guid: aa34bfad1cf55894ba999285cf16fe20
+  - enabled: 1
+    path: Assets/Scenes/Menu/Menu/PressAnyKey.unity
+    guid: e182eb6c5e44eca489ed4060c3565e08
+  - enabled: 1
+    path: Assets/Scenes/Menu/Menu/Configurations.unity
+    guid: c4ee0da5d0cc44946a44c41c97726fa2
+  - enabled: 1
+    path: Assets/Scenes/Menu/Menu/StartGame.unity
+    guid: 424f480b48036f846be81637f5928bd1
+  - enabled: 1
+    path: Assets/Scenes/Worlds/WorldSelect.unity
+    guid: 29381ad267b0b8343b59c6d8b06bbdb1
+  - enabled: 1
+    path: Assets/Scenes/Worlds/World1/Levels/World01_Level1_PartA.unity
+    guid: 3384671fd7ad6844c8bd6b06c414a841
+  - enabled: 1
+    path: Assets/Scenes/Worlds/World1/Levels/World01_Level1_PartA/Level1.unity
+    guid: d697447d291e6524b9098a964bad06db
+  - enabled: 1
+    path: Assets/Scenes/Worlds/World1/Levels/World01_Level1_PartA/Level1B.unity
+    guid: 554dab8eeca93f640918261dbe46da65
+  - enabled: 1
+    path: Assets/Scenes/Worlds/World1/Levels/World01_Level1_PartA/Level2.unity
+    guid: fc62fa8ab17adf94a81c58fddbb719b1
+  - enabled: 1
+    path: Assets/Scenes/Worlds/World1/Levels/World01_Level1_PartA/Level3.unity
+    guid: 4ed34045bdb0d9848843137f0b7a3663
+  m_configObjects:
+    com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: 47693ca6c701e5d4fa90f76b9ab4bf54, type: 2}
+    com.unity.adaptiveperformance.samsung.android.provider_settings: {fileID: 11400000, guid: 15ce544024f4d4d47931c2c9d25bf870, type: 2}
+    com.unity.adaptiveperformance.simulator.provider_settings: {fileID: 11400000, guid: 55901c0dddb1c814994304cb01d3a639, type: 2}
+    com.unity.addressableassets: {fileID: 11400000, guid: d424401c1ec9f234894dd647132882c4, type: 2}
+    com.unity.input.settings: {fileID: 11400000, guid: 8c857d121697337418df5903630d79b2, type: 2}
+    com.unity.localization.settings: {fileID: 11400000, guid: a15b52211aa9090489d9e984004c251a, type: 2}

@@ -1,0 +1,67 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: Intro_Languages_en
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: en
+  m_SharedData: {fileID: 11400000, guid: f0d08f07a1c44c04b96e8f3d3bf69022, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 116470800384
+    m_Localized: Once upon a time in an enchanted forest...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 460529557504
+    m_Localized: Mystical creatures dwell there...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 695884537856
+    m_Localized: All friends with each other...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 713131515904
+    m_Localized: But Bardulf He hated joy and happiness, and he made it a way to
+      end it.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 728231010304
+    m_Localized: Willow and her companion Ellie lived in a part of the forest.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1065117507584
+    m_Localized: Willow set out on her journey to enter the woods of Bardulf, and
+      save her lifemate.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1062835806208
+    m_Localized: Willow knew who it was.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 998713286656
+    m_Localized: And strangely the bewitched mystical creatures turned evil and started
+      attacking Willow.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 997169782784
+    m_Localized: One day his companion was kidnapped by the evil Bardulf, out of
+      jealousy of her.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 994892275712
+    m_Localized: They lived in a cave.
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []

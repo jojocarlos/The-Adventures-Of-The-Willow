@@ -1,0 +1,6 @@
+Instructions on how to enable the parallax effect for the demo scene.
+
+1. Create 2 new layers with the names Background and Foreground.
+2. Enable the PerspectiveCamera object (it is a child of the main camera) and set 
+   its Culling Mask to Background.
+3. Select the main camera and set it's Culling Mask to everything except the Background layer.

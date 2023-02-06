@@ -1,0 +1,200 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &168922
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 417500}
+  - component: {fileID: 11482344}
+  - component: {fileID: 3303256}
+  - component: {fileID: 2317636}
+  - component: {fileID: 6167436}
+  - component: {fileID: 25395596}
+  m_Layer: 0
+  m_Name: Water2DBack
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &417500
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 168922}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -11.11, y: 1.23, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &11482344
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 168922}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 851fedf6d26b0c64d931010f42a65c85, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  topColor: {r: 1, g: 1, b: 1, a: 1}
+  bottomColor: {r: 0, g: 0.7490196, b: 1, a: 1}
+  resolution: 10
+  width: 26.87
+  height: 4.7
+  createCollders: 1
+  colliderHeightOffset: -0.12
+  updateWaveColliders: 0
+  updateWaveCollidersDelay: 0.2
+  waterBounce: 0.04
+  waterDamping: 0.12
+  waterWaveSpread: 0.05
+  waveSpreadLength: 15
+  velocityMultiplier: 0.07
+  maxForce: 10
+  minVelocity: 0
+  enableWave: 1
+  noise: 0
+  randomSplashDelay: 3
+  randomSplash: 0
+  waveHeight: 0.0037
+  waveSpeed: 5.2
+  waveLimit: 1
+  waveFrequency: 1.59
+  wavePower: 200
+  waveTorque: 0.587
+  CreateUV: 1
+  UVScale: 0.71
+  UVDistort: 0.413
+  materialOffsetSpeed: 0
+  sortingOrder: 20
+  sortingLayer: 1468038599
+  materialTileScale: 0.2
+  particles: {fileID: 0}
+  particleSplashPower: 3
+  particleSplashEmit: 2
+  bubbleParticles: {fileID: 0}
+  bubbleParticlesEmissionRate: 8
+  splashSounds:
+  - {fileID: 8300000, guid: 70af235cb67b5c347aa1e08ef4124960, type: 3}
+  exitSounds:
+  - {fileID: 8300000, guid: 2e551ef2861d4e5458178abcd451787a, type: 3}
+  splashSoundVolume: 0.5
+  splashSoundDelay: 0.15
+  enabledOutsideScreen: 0
+  cacheTransform: {fileID: 0}
+  cacheParticleTransform: {fileID: 0}
+  cacheMeshFilter: {fileID: 0}
+  cacheMeshRenderer: {fileID: 0}
+  cacheCollider: {fileID: 6167436}
+  forced:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  waterObjects: []
+--- !u!33 &3303256
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 168922}
+  m_Mesh: {fileID: 0}
+--- !u!23 &2317636
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 168922}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: bc3c1735aef036945affca16efcbc76b, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!61 &6167436
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 168922}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 1
+  m_UsedByComposite: 0
+  m_Offset: {x: 13.435, y: -2.4099998}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 26.87, y: 4.58}
+  m_EdgeRadius: 0
+--- !u!253 &25395596
+BuoyancyEffector2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 168922}
+  m_Enabled: 1
+  m_UseColliderMask: 1
+  m_ColliderMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_SurfaceLevel: -0.14
+  m_Density: 1.82
+  m_LinearDrag: 2.98
+  m_AngularDrag: 0.08
+  m_FlowAngle: 0
+  m_FlowMagnitude: 0
+  m_FlowVariation: 0
