@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="ParameterPreset" id="{7d0f9192-2b44-4b69-952f-6627dc4d7dba}">
+		<property name="name">
+			<value>MenuMusicChange</value>
+		</property>
+		<relationship name="folder">
+			<destination>{dad2f27a-60ec-472b-902a-5f590405ba35}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{fe928cd6-0466-4446-af6e-49fefde1b9da}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{fe928cd6-0466-4446-af6e-49fefde1b9da}">
+		<property name="parameterType">
+			<value>2</value>
+		</property>
+		<property name="maximum">
+			<value>3</value>
+		</property>
+		<property name="enumerationLabels">
+			<value>MusicA</value>
+			<value>MusicB</value>
+			<value>MusicC</value>
+		</property>
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+	</object>
+</objects>
