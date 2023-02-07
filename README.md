@@ -14,7 +14,7 @@ contribute, something similar to the contributions of SuperTux or SuperTuxKart g
 The Adventures Of The Willow game is a game made in Unity Engine using C#, the game is an idea
 based on the two sequels to Ori and The Blind Forest and Super Mario.
 
-Using the two together will be based on having objects like Super Mario, but in an open world like the original.
+Using the two together will be based on having objects like Super Mario, but in an open world like the ori.
 making it look like everything followed with the additive scene, and set against beautiful landscapes.
 Having the map to guide you to see the objects and places where the player is, just like the ori or hollow knight.
 Each world will have its theme with open worlds, the first one for example will be a forest, this one will have a
