@@ -1007,7 +1007,7 @@ MonoBehaviour:
   Path: ../FMOD/Projects/Willow/Build/Desktop/Ambience.assets.bank
   Name: Ambience.assets
   StudioPath: bank:/Ambience.assets
-  lastModified: 638112230729798192
+  lastModified: 638115615958326165
   FileSizes:
   - Name: Desktop
     Value: 8795296
@@ -1308,9 +1308,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Birds/BirdsAmbienceIntensity
+  m_Name: parameter:/Birds/birdsIntensity
   m_EditorClassIdentifier: 
-  Name: BirdsAmbienceIntensity
+  Name: birdsIntensity
   StudioPath: 
   Min: 0
   Max: 1
@@ -1682,7 +1682,7 @@ MonoBehaviour:
   Path: ../FMOD/Projects/Willow/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638112230730078222
+  lastModified: 638115615958596158
   FileSizes:
   - Name: Desktop
     Value: 17154
@@ -1726,10 +1726,10 @@ MonoBehaviour:
   Path: ../FMOD/Projects/Willow/Build/Desktop/Master.assets.bank
   Name: Master.assets
   StudioPath: bank:/Master.assets
-  lastModified: 638112230732048643
+  lastModified: 638115615960106323
   FileSizes:
   - Name: Desktop
-    Value: 12490496
+    Value: 12490944
   - Name: Mobile
     Value: 19419104
   Exists: 1
@@ -1856,10 +1856,10 @@ MonoBehaviour:
   Path: ../FMOD/Projects/Willow/Build/Desktop/SFX.assets.bank
   Name: SFX.assets
   StudioPath: bank:/SFX.assets
-  lastModified: 638112230733343842
+  lastModified: 638115615961694715
   FileSizes:
   - Name: Desktop
-    Value: 3537536
+    Value: 2044480
   - Name: Mobile
     Value: 6260960
   Exists: 1
@@ -2058,12 +2058,13 @@ MonoBehaviour:
   - {fileID: -3017338202107060359}
   - {fileID: -7408818368055880404}
   - {fileID: -6812953420577289354}
+  - {fileID: 1232986699009948013}
   EditorParameters: []
   MasterBanks:
   - {fileID: -2281873765650015644}
   StringsBanks:
   - {fileID: 5280939037303829309}
-  cacheTime: 638112230733343842
+  cacheTime: 638115615961694715
   cacheVersion: 131601
 --- !u!114 &121352554842827011
 MonoBehaviour:
@@ -2134,10 +2135,10 @@ MonoBehaviour:
   Path: ../FMOD/Projects/Willow/Build/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 638112230732503800
+  lastModified: 638115615960551371
   FileSizes:
   - Name: Desktop
-    Value: 31340
+    Value: 31088
   - Name: Mobile
     Value: 31340
   Exists: 1
@@ -2347,6 +2348,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 750
+--- !u!114 &1232986699009948013
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Others/BirdsFlutter
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Others/BirdsFlutter
+  Guid:
+    Data1: 1160088037
+    Data2: 1259885234
+    Data3: -199294017
+    Data4: 288116413
+  Banks:
+  - {fileID: 413446526340173305}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 10
+  MaxDistance: 10000
+  Length: 2000
 --- !u!114 &1488756996789444903
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2471,12 +2499,12 @@ MonoBehaviour:
   Path: ../FMOD/Projects/Willow/Build/Desktop/Ambience.bank
   Name: Ambience
   StudioPath: bank:/Ambience
-  lastModified: 638112230728207676
+  lastModified: 638115615957226070
   FileSizes:
   - Name: Desktop
-    Value: 10286
+    Value: 10066
   - Name: Mobile
-    Value: 10286
+    Value: 10074
   Exists: 1
 --- !u!114 &1907480838317902423
 MonoBehaviour:
@@ -3209,12 +3237,12 @@ MonoBehaviour:
   Path: ../FMOD/Projects/Willow/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638112230732078624
+  lastModified: 638115615960156328
   FileSizes:
   - Name: Desktop
-    Value: 2924
+    Value: 2978
   - Name: Mobile
-    Value: 2924
+    Value: 2978
   Exists: 1
 --- !u!114 &5720668018176631651
 MonoBehaviour:
@@ -3639,7 +3667,6 @@ MonoBehaviour:
     Data4: 1633651068
   Banks:
   - {fileID: 1873434043311576186}
-  - {fileID: 413446526340173305}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0

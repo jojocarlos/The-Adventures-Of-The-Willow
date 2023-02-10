@@ -23,10 +23,10 @@ MonoBehaviour:
   RotationSpeed: 300
   SwimForce: 50
   runMaxSpeed: 9.5
-  runAcceleration: 9.5
-  runAccelAmount: 50
-  runDecceleration: 9.5
-  runDeccelAmount: 50
+  runAcceleration: 5.5
+  runAccelAmount: 28.947369
+  runDecceleration: 7.5
+  runDeccelAmount: 39.473682
   accelInAir: 1
   deccelInAir: 1
   doConserveMomentum: 0
@@ -56,3 +56,5 @@ MonoBehaviour:
   dashRefillTime: 0.1
   dashInputBufferTime: 0.1
   speedladder: 8
+  TrampolineJumpForce: 0
+  jumpStompEnemy: 0

@@ -27,6 +27,7 @@ public class FMODEvents : MonoBehaviour
     [field: SerializeField] public EventReference playerJump { get; private set; }
     [field: SerializeField] public EventReference Dead { get; private set; }
     [field: SerializeField] public EventReference Hurt { get; private set; }
+    [field: SerializeField] public EventReference BirdsFlutter { get; private set; }
 
 
     [field: Header("Coin SFX, and PowerUps")]

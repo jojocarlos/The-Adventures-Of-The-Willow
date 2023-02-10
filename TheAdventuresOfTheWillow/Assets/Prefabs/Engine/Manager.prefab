@@ -46,7 +46,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   masterVolume: 1
-  musicVolume: 0
+  musicVolume: 1
   ambienceVolume: 1
   SFXVolume: 1
 --- !u!1 &4180794215983299684
@@ -199,6 +199,13 @@ MonoBehaviour:
       Data3: -1418847854
       Data4: 474460751
     Path: event:/SFX/Player/Hurt
+  <BirdsFlutter>k__BackingField:
+    Guid:
+      Data1: 1160088037
+      Data2: 1259885234
+      Data3: -199294017
+      Data4: 288116413
+    Path: event:/SFX/Others/BirdsFlutter
   <coinCollected>k__BackingField:
     Guid:
       Data1: 439853675

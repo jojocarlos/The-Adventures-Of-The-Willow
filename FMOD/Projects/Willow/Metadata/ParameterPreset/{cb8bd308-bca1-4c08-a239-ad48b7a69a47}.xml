@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.02.00">
 	<object class="ParameterPreset" id="{cb8bd308-bca1-4c08-a239-ad48b7a69a47}">
 		<property name="name">
-			<value>BirdsAmbienceIntensity</value>
+			<value>birdsIntensity</value>
 		</property>
 		<relationship name="folder">
 			<destination>{dad2f27a-60ec-472b-902a-5f590405ba35}</destination>

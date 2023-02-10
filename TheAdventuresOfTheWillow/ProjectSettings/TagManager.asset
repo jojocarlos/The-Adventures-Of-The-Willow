@@ -84,13 +84,13 @@ TagManager:
   - name: Trees1
     uniqueID: 3293307367
     locked: 0
-  - name: Trees
+  - name: Trees2
     uniqueID: 441670063
     locked: 0
   - name: Leafs2
     uniqueID: 2374288795
     locked: 0
-  - name: Leafs
+  - name: Leafs1
     uniqueID: 3459396189
     locked: 0
   - name: Leafs3
@@ -146,6 +146,18 @@ TagManager:
     locked: 0
   - name: Front_01
     uniqueID: 3094129717
+    locked: 0
+  - name: FTrees1
+    uniqueID: 2552359851
+    locked: 0
+  - name: FTrees2
+    uniqueID: 2336205443
+    locked: 0
+  - name: FLeafs1
+    uniqueID: 271132795
+    locked: 0
+  - name: FLeafs2
+    uniqueID: 1114637835
     locked: 0
   - name: FrontCamera
     uniqueID: 864056735

@@ -39,17 +39,17 @@ public class CameraZoom : MonoBehaviour
     
     public void ZoomIn()
 	{
-		_vCam.m_Lens.FieldOfView = Mathf.Lerp(_vCam.m_Lens.FieldOfView, 60, zoomSpeed);
+		_vCam.m_Lens.FieldOfView = Mathf.Lerp(_vCam.m_Lens.FieldOfView, 75, zoomSpeed);
 	}
 	
 	public void ZoomOut()
 	{
-		_vCam.m_Lens.FieldOfView = Mathf.Lerp(_vCam.m_Lens.FieldOfView, 72, zoomSpeed);
+		_vCam.m_Lens.FieldOfView = Mathf.Lerp(_vCam.m_Lens.FieldOfView, 90, zoomSpeed);
 	}
 
     public void ZoomOutJump()
     {
-        _vCam.m_Lens.FieldOfView = Mathf.Lerp(_vCam.m_Lens.FieldOfView, 80, zoomSpeed);
+        _vCam.m_Lens.FieldOfView = Mathf.Lerp(_vCam.m_Lens.FieldOfView, 100, zoomSpeed);
     }
 	
 	public void ZoomOutFinish()
@@ -61,7 +61,7 @@ public class CameraZoom : MonoBehaviour
 
     public void SwimmingZoomOut()
     {
-        _vCam.m_Lens.FieldOfView = Mathf.Lerp(_vCam.m_Lens.FieldOfView, 70, zoomSpeed);
+        _vCam.m_Lens.FieldOfView = Mathf.Lerp(_vCam.m_Lens.FieldOfView, 90, zoomSpeed);
     }
 
     private void LateUpdate()

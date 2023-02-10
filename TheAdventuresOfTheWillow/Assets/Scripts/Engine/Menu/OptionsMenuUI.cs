@@ -10,17 +10,15 @@ public class OptionsMenuUI : MonoBehaviour
     [SerializeField] private GameObject OptionsMenu;
     [SerializeField] private bool isPaused;
     public CursorManager cursorManager;
-	
-	public GameObject optionsFirstButton;
-
 
     public void EscapeMenu(InputAction.CallbackContext context)
 	{
         if (context.performed)
      	{
 			isPaused = !isPaused;
-		}
+        }
     }
+
 
     private void Update()
     {
@@ -31,8 +29,6 @@ public class OptionsMenuUI : MonoBehaviour
         }*/
         if (isPaused)
         {
-			EventSystem.current.SetSelectedGameObject(null);
-			EventSystem.current.SetSelectedGameObject(optionsFirstButton);
             ActivateMenu();
         }
         else
@@ -44,17 +40,15 @@ public class OptionsMenuUI : MonoBehaviour
     public void ActivateMenu()
     {
         Time.timeScale = 0;
-        AudioListener.pause = true;
         OptionsMenu.SetActive(true);
-		cursorManager.cursorAppear();
+        cursorManager.cursorAppear();
     }
     public void DeactivateMenu()
     {
         Time.timeScale = 1;
-        AudioListener.pause = false;
         OptionsMenu.SetActive(false);
         isPaused = false;
-		cursorManager.cursorDisappear();
+        cursorManager.cursorDisappear();
     }
 
 }
