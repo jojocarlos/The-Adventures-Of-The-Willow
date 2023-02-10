@@ -14,7 +14,7 @@ contribute, something similar to the contributions of SuperTux or SuperTuxKart g
 The Adventures Of The Willow game is a game made in Unity Engine using C#, the game is an idea
 based on the two sequels to Ori and The Blind Forest and Super Mario.
 
-Using the two together will be based on having objects like Super Mario, but in an open world like the original.
+Using the two together will be based on having objects like Super Mario, but in an open world like the ori,
 making it look like everything followed with the additive scene, and set against beautiful landscapes.
 Having the map to guide you to see the objects and places where the player is, just like the ori or hollow knight.
 Each world will have its theme with open worlds, the first one for example will be a forest, this one will have a
@@ -58,7 +58,7 @@ contribuir, algo parecido com as contribuições dos jogos SuperTux ou SuperTuxK
 O jogo The Adventures Of the Willow é um jogo feito no Unity Engine usando o C#, o jogo é uma ideia
 baseada nas duas sequencias do Ori and The Blind Forest e no Super Mário.
 
-Usandos os dois juntos vai ser baseado para ter objectos como os do Super Mário, mas num mundo aberto como o do ori
+Usandos os dois juntos vai ser baseado para ter objectos como os do Super Mário, mas num mundo aberto como o do ori,
 fazendo parecer tudo seguido com o additive scene, e ambientado por lindas paisagens. 
 Tendo o mapa para se orientar para ver os objectos e os locais onde o jogador esteja, igual ao ori ou hollow knight. 
 Cada mundo terá seu tema com mundos abertos, o primeiro por exemplo será uma floresta, esta terá uma
