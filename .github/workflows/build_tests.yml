@@ -10,7 +10,7 @@ jobs:
       fail-fast: false
       matrix:
         projectPath:
-          - TheAdventuresOfTheWillow
+          - The-Adventures-Of-The-Willow/TheAdventuresOfTheWillow/
         testMode:
           - playmode
           - editmode
