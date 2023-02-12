@@ -16,7 +16,6 @@ jobs:
           - StandaloneLinux64 # Build a Linux 64-bit standalone.
           - iOS # Build an iOS player.
           - Android # Build an Android .apk standalone app.
-          - WebGL # WebGL.
     steps:
       - uses: actions/checkout@v2
         with:
@@ -24,7 +23,7 @@ jobs:
           lfs: true
       - uses: actions/cache@v2
         with:
-          path: The-Adventures-Of-The-Willow/TheAdventuresOfTheWillow/
+          path: TheAdventuresOfTheWillow
           key: Library-${{ matrix.targetPlatform }}
           restore-keys: Library-
       - uses: game-ci/unity-builder@v2
