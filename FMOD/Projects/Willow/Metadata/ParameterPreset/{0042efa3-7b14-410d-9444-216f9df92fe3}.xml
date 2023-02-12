@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="ParameterPreset" id="{0042efa3-7b14-410d-9444-216f9df92fe3}">
+		<property name="name">
+			<value>UnderWater</value>
+		</property>
+		<relationship name="folder">
+			<destination>{dad2f27a-60ec-472b-902a-5f590405ba35}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{2204660e-2ed9-410b-9415-d747a14d147a}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{2204660e-2ed9-410b-9415-d747a14d147a}">
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+	</object>
+</objects>

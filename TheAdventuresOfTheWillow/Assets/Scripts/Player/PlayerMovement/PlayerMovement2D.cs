@@ -94,6 +94,7 @@ public class PlayerMovement2D : MonoBehaviour, IDataPersistence
 	//Swimming
 	[Header("Swiming System")]
 	public bool isOnWater;
+    public bool waterTop;
     public bool Swimming;
 	private Vector2 swimMoveDirection;
 
@@ -392,6 +393,22 @@ public class PlayerMovement2D : MonoBehaviour, IDataPersistence
 				SetGravityScale(0);
 			}
 		}
+
+		if(waterTop)
+		{
+            if (RB.velocity.y < 0)
+            {
+                //Higher gravity if falling
+                SetGravityScale(Data.gravityScale * Data.fallGravityMult);
+                //Caps maximum fall speed, so when falling over large distances we don't accelerate to insanely high speeds
+                RB.velocity = new Vector2(RB.velocity.x, Mathf.Max(RB.velocity.y, -Data.maxFallSpeed));
+            }
+            else
+            {
+                //Default gravity if standing on a platform or moving upwards
+                SetGravityScale(Data.gravityScale);
+            }
+        }
 		#endregion
 
 
@@ -400,9 +417,9 @@ public class PlayerMovement2D : MonoBehaviour, IDataPersistence
             isClimbing = true;
         }
 
-		if (Swimming && !isDead)
+		if (Swimming && !isDead && !waterTop)
 		{
-			swimMoveDirection = new Vector2(_moveInput.x, _moveInput.y);
+            swimMoveDirection = new Vector2(_moveInput.x, _moveInput.y);
 			float inputMagnitude = Mathf.Clamp01(swimMoveDirection.magnitude);
 			swimMoveDirection.Normalize();
 			transform.Translate(swimMoveDirection * Data.SwimSpeed * inputMagnitude * Time.deltaTime, Space.World);
@@ -413,6 +430,13 @@ public class PlayerMovement2D : MonoBehaviour, IDataPersistence
 				transform.rotation = Quaternion.RotateTowards(transform.rotation, toRotation, Data.RotationSpeed * Time.deltaTime);
 			}
 		}
+		else if(waterTop)
+		{
+            swimMoveDirection = new Vector2(_moveInput.x, _moveInput.y);
+            float inputMagnitude = Mathf.Clamp01(swimMoveDirection.magnitude);
+            swimMoveDirection.Normalize();
+            transform.Translate(swimMoveDirection * Data.SwimSpeed * inputMagnitude * Time.deltaTime, Space.World);
+        }
 
 		if(_moveInput.x == 0 && isGrounded)
 		{
@@ -428,7 +452,6 @@ public class PlayerMovement2D : MonoBehaviour, IDataPersistence
 
         UpdateSound();
     }
-
     private void FixedUpdate()
 	{
         //Climb
@@ -469,14 +492,17 @@ public class PlayerMovement2D : MonoBehaviour, IDataPersistence
 			isClimbing = false;
 			if (Swimming)
 			{
-				Data.SwimSpeed = 10f;
-				RB.AddForce(transform.rotation * Vector2.up * Data.SwimForce, ForceMode2D.Impulse);
+				Data.SwimSpeed = 20f;
+				RB.AddForce(transform.rotation * Vector2.up * Data.SwimForce * Data.SwimSpeed, ForceMode2D.Impulse);
 				//RB.AddForce(new Vector2(RB.velocity.x, Data.SwimForce), ForceMode2D.Impulse);
 			}
-			else
+			else if(waterTop)
 			{
-				Data.SwimSpeed = 5f;
-			}
+                Data.SwimSpeed = 10f;
+                LastOnGroundTime = Data.coyoteTime;
+                SetGravityScale(Data.gravityScale);
+                RB.AddForce(transform.rotation * Vector2.up * Data.SwimSpeed, ForceMode2D.Impulse);
+            }
 		}
     }
 
@@ -484,6 +510,15 @@ public class PlayerMovement2D : MonoBehaviour, IDataPersistence
 	{
 		if (CanJumpCut() || CanWallJumpCut())
 			_isJumpCut = true;
+
+		if(Swimming)
+		{
+            Data.SwimSpeed = 5f;
+        }
+		else
+		{
+            Data.SwimSpeed = 5f;
+        }
 	}
 
 	public void OnDashInput()
@@ -585,6 +620,59 @@ public class PlayerMovement2D : MonoBehaviour, IDataPersistence
                 RB.velocity = new Vector2(KnockBack, KnockBack);
             }
             KnockBackCount -= Time.deltaTime;
+        }
+
+		if(waterTop)
+		{
+            //Calculate the direction we want to move in and our desired velocity
+            float targetSpeed = _moveInput.x * Data.runMaxSpeed;
+            //We can reduce are control using Lerp() this smooths changes to are direction and speed
+            targetSpeed = Mathf.Lerp(RB.velocity.x, targetSpeed, lerpAmount);
+
+            #region Calculate AccelRate
+            float accelRate;
+
+            //Gets an acceleration value based on if we are accelerating (includes turning) 
+            //or trying to decelerate (stop). As well as applying a multiplier if we're air borne.
+            if (LastOnGroundTime > 0)
+                accelRate = (Mathf.Abs(targetSpeed) > 0.01f) ? Data.runAccelAmount : Data.runDeccelAmount;
+            else
+                accelRate = (Mathf.Abs(targetSpeed) > 0.01f) ? Data.runAccelAmount * Data.accelInAir : Data.runDeccelAmount * Data.deccelInAir;
+            #endregion
+
+            #region Add Bonus Jump Apex Acceleration
+            //Increase are acceleration and maxSpeed when at the apex of their jump, makes the jump feel a bit more bouncy, responsive and natural
+            if ((IsJumping || IsWallJumping || _isJumpFalling) && Mathf.Abs(RB.velocity.y) < Data.jumpHangTimeThreshold)
+            {
+                accelRate *= Data.jumpHangAccelerationMult;
+                targetSpeed *= Data.jumpHangMaxSpeedMult;
+            }
+            #endregion
+
+            #region Conserve Momentum
+            //We won't slow the player down if they are moving in their desired direction but at a greater speed than their maxSpeed
+            if (Data.doConserveMomentum && Mathf.Abs(RB.velocity.x) > Mathf.Abs(targetSpeed) && Mathf.Sign(RB.velocity.x) == Mathf.Sign(targetSpeed) && Mathf.Abs(targetSpeed) > 0.01f && LastOnGroundTime < 0)
+            {
+                //Prevent any deceleration from happening, or in other words conserve are current momentum
+                //You could experiment with allowing for the player to slightly increae their speed whilst in this "state"
+                accelRate = 0;
+            }
+            #endregion
+
+            //Calculate difference between current velocity and desired velocity
+            float speedDif = targetSpeed - RB.velocity.x;
+            //Calculate force along x-axis to apply to thr player
+
+            float movement = speedDif * accelRate;
+
+            //Convert this to a vector and apply to rigidbody
+            RB.AddForce(movement * Vector2.right, ForceMode2D.Force);
+
+            /*
+			 * For those interested here is what AddForce() will do
+			 * RB.velocity = new Vector2(RB.velocity.x + (Time.fixedDeltaTime  * speedDif * accelRate) / RB.mass, RB.velocity.y);
+			 * Time.fixedDeltaTime is by default in Unity 0.02 seconds equal to 50 FixedUpdate() calls per second
+			*/
         }
     }
 
@@ -781,11 +869,19 @@ public class PlayerMovement2D : MonoBehaviour, IDataPersistence
     {
         if (col.gameObject.CompareTag("water"))
         {
+            Data.SwimSpeed = 5f;
             Swimming = true;
 			isOnWater = true;
+			waterTop = false;
 			RB.drag = 5f;
             SetGravityScale(Data.SwimGravity);
             Bubble.Play();
+        }
+        if (col.gameObject.CompareTag("waterTop"))
+        {
+            waterTop = true;
+            isOnWater = true;
+            SetGravityScale(Data.gravityScale);
         }
 
         if (col.gameObject.CompareTag("Ladder"))
@@ -801,7 +897,14 @@ public class PlayerMovement2D : MonoBehaviour, IDataPersistence
         {
             //cameraZoom.ZoomOut();
             isOnWater = true;
+			waterTop = false;
             Bubble.Play();
+        }
+        if (col.gameObject.CompareTag("waterTop"))
+        {
+			waterTop = true;
+            isOnWater = true;
+            SetGravityScale(Data.gravityScale);
         }
         if (col.gameObject.CompareTag("Ladder"))
         {
@@ -821,6 +924,15 @@ public class PlayerMovement2D : MonoBehaviour, IDataPersistence
             Bubble.Stop();
         }
 
+        if (col.gameObject.CompareTag("waterTop"))
+        {
+            waterTop = false;
+			if(!Swimming)
+			{
+                isOnWater = false;
+            }
+            SetGravityScale(Data.gravityScale);
+        }
         if (col.gameObject.CompareTag("Ladder"))
         {
             isLadder = false;

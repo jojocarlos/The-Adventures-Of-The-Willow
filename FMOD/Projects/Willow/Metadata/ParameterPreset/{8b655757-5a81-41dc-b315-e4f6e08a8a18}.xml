@@ -27,7 +27,7 @@
 			<value>Forest05</value>
 		</property>
 		<property name="initialValue">
-			<value>1</value>
+			<value>0</value>
 		</property>
 		<property name="seekSpeed">
 			<value>0.91999995708465576</value>

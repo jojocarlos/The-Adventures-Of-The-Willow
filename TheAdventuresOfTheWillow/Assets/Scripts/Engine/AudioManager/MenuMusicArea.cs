@@ -1,4 +1,4 @@
-public enum MenuMusicChanger
+public enum MenuMusicArea
 {
     MusicA = 0,
     MusicB = 1,

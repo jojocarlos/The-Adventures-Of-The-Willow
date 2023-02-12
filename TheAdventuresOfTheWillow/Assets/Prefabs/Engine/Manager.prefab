@@ -164,6 +164,13 @@ MonoBehaviour:
       Data3: 1333367685
       Data4: 869132885
     Path: event:/Musics/Forest01
+  <MenuMusic>k__BackingField:
+    Guid:
+      Data1: 1714064592
+      Data2: 1279810553
+      Data3: 1258217874
+      Data4: 1452086045
+    Path: event:/Musics/Menu
   <Invinciblemusic>k__BackingField:
     Guid:
       Data1: 1625357869

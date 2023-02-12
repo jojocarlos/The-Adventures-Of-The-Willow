@@ -20,7 +20,7 @@ MonoBehaviour:
   maxFastFallSpeed: 10
   SwimGravity: 0.4
   SwimSpeed: 5
-  RotationSpeed: 300
+  RotationSpeed: 1000
   SwimForce: 50
   runMaxSpeed: 9.5
   runAcceleration: 5.5

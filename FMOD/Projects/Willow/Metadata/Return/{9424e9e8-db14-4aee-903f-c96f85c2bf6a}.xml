@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="MixerReturn" id="{9424e9e8-db14-4aee-903f-c96f85c2bf6a}">
+		<property name="name">
+			<value>Water</value>
+		</property>
+		<relationship name="effectChain">
+			<destination>{e44d6848-8490-4763-b3d1-c9fa7890b33d}</destination>
+		</relationship>
+		<relationship name="panner">
+			<destination>{7c5bb9df-b635-4b37-bff8-59b6cc419ca4}</destination>
+		</relationship>
+		<relationship name="output">
+			<destination>{86f59818-a80e-40a0-a56f-699158660358}</destination>
+		</relationship>
+	</object>
+	<object class="MixerBusEffectChain" id="{e44d6848-8490-4763-b3d1-c9fa7890b33d}">
+		<relationship name="effects">
+			<destination>{ca40baea-e22d-428f-8f2a-29b83f9ff05d}</destination>
+			<destination>{a27cc395-6bc3-4509-98a9-f18cb2f1b2ad}</destination>
+			<destination>{5dbfbe7c-3625-4ac4-94fd-57397edcd3f1}</destination>
+		</relationship>
+	</object>
+	<object class="MixerBusPanner" id="{7c5bb9df-b635-4b37-bff8-59b6cc419ca4}" />
+	<object class="MixerBusFader" id="{ca40baea-e22d-428f-8f2a-29b83f9ff05d}" />
+	<object class="LowpassEffect" id="{a27cc395-6bc3-4509-98a9-f18cb2f1b2ad}" />
+	<object class="MixerSend" id="{5dbfbe7c-3625-4ac4-94fd-57397edcd3f1}">
+		<property name="inputFormat">
+			<value>1</value>
+		</property>
+		<relationship name="mixerReturn">
+			<destination>{12de840b-6085-45a3-b7f1-26d42a3bb328}</destination>
+		</relationship>
+	</object>
+</objects>

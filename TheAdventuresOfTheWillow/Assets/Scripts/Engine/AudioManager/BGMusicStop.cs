@@ -6,6 +6,6 @@ public class BGMusicStop : MonoBehaviour
 {
     void Awake()
     {
-		BGMusic.instance.GetComponent<AudioSource>().Pause();
-	}
+        BGMusic.instance.destroyObject();
+    }
 }

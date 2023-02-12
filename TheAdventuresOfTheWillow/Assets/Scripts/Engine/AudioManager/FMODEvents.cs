@@ -19,6 +19,7 @@ public class FMODEvents : MonoBehaviour
 
     [field: Header("Music")]
     [field: SerializeField] public EventReference music { get; private set; }
+    [field: SerializeField] public EventReference MenuMusic { get; private set; }
     [field: SerializeField] public EventReference Invinciblemusic { get; private set; }
 
 

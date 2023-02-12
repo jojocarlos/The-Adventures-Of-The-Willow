@@ -26,6 +26,7 @@ public class AudioManager : MonoBehaviour
 
     private EventInstance ambienceEventInstance;
     private EventInstance musicEventInstance;
+    private EventInstance menuMusicEventInstance;
 
     public static AudioManager instance { get; private set; }
 
@@ -36,6 +37,7 @@ public class AudioManager : MonoBehaviour
             Debug.LogError("Found more than one Audio Manager in the scene.");
         }
         instance = this;
+
 
         eventInstances = new List<EventInstance>();
         eventEmitters = new List<StudioEventEmitter>();
@@ -59,6 +61,7 @@ public class AudioManager : MonoBehaviour
     {
         InitializeAmbience(FMODEvents.instance.ambience);
         InitializeMusic(FMODEvents.instance.music);
+        InitializeMenuMusic(FMODEvents.instance.MenuMusic);
     }
 
     private void Update()
@@ -81,19 +84,37 @@ public class AudioManager : MonoBehaviour
         musicEventInstance.start();
     }
 
+    private void InitializeMenuMusic(EventReference menuMusicEventReference)
+    {
+        menuMusicEventInstance = CreateInstance(menuMusicEventReference);
+        menuMusicEventInstance.start();
+    }
+    //ambience
     public void SetAmbienceParameter(string parameterName, float parameterValue)
     {
         ambienceEventInstance.setParameterByName(parameterName, parameterValue);
     }
 
+    //music
     public void SetMusicArea(MusicArea area)
     {
         musicEventInstance.setParameterByName("area", (float) area);
     }
-    public void SetMusicMenuArea(MenuMusicChanger MenuMusicChange)
+    public void SetMusicAreaParameter(string parameterName, float parameterValue)
+    {
+        musicEventInstance.setParameterByName(parameterName, parameterValue);
+    }
+    //menu music
+    public void SetMusicMenuArea(MenuMusicArea MenuMusicChange)
     {
         musicEventInstance.setParameterByName("MusicMenuChange", (float)MenuMusicChange);
     }
+    public void SetMusicMenuAreaParameter(string parameterName, float parameterValue)
+    {
+        menuMusicEventInstance.setParameterByName(parameterName, parameterValue);
+    }
+
+    //oneshot
     public void PlayOneShot(EventReference sound, Vector3 worldPos)
     {
         RuntimeManager.PlayOneShot(sound, worldPos);
@@ -102,6 +123,10 @@ public class AudioManager : MonoBehaviour
     {
         RuntimeManager.PlayOneShot(sound);
     }
+
+
+
+
 
     public EventInstance CreateInstance(EventReference eventReference)
     {

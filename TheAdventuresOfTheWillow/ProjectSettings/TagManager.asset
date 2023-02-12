@@ -41,6 +41,7 @@ TagManager:
   - CinemachineCamera
   - Spirit
   - BossEnter
+  - waterTop
   layers:
   - Default
   - TransparentFX
