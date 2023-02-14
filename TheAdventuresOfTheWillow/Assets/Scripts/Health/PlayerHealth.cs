@@ -225,4 +225,217 @@ public class PlayerHealth : MonoBehaviour, IDataPersistence
     {
         data.currentHealth = this.currentHealth;
     }
+
+    private void OnTriggerStay2D(Collider2D col)
+    {
+        if (col.gameObject.CompareTag("enemy"))
+        {
+            if (canDamage && isExplode == false && powers.isPowered == false && !isInvinciblePower)
+            {
+                AudioManager.instance.PlayOneShot(FMODEvents.instance.Hurt);
+                TakeDamage(5);
+                canDamage = false;
+                playerColor.color = UnityEngine.Color.red;
+                //can die if currentHealth is <=0
+                if (currentHealth <= 0)
+                {
+                    Die();
+                }
+            }
+            if (canDamage && !isExplode && powers.isPowered)
+            {
+                powers.isNormalState();
+            }
+        }
+
+        //imediate dead enemies
+        if (col.gameObject.tag == "morte_imediata")
+        {
+            if (canDamage && !isExplode && !powers.isPowered && !isInvinciblePower)
+            {
+                canDamage = false;
+                //remove all health and die
+                TakeDamage(maxHealth);
+                Die();
+            }
+            if (canDamage && !isExplode && powers.isPowered && !isInvinciblePower)
+            {
+                canDamage = false;
+                powers.isNormalState();
+            }
+        }
+
+        //dead laser
+        if (col.gameObject.tag == "Laser")
+        {
+            if (canDamage && !isExplode && !powers.isPowered && !isInvinciblePower)
+            {
+                canDamage = false;
+                //remove all health and die
+                TakeDamage(maxHealth);
+                Die();
+            }
+            if (canDamage && !isExplode && powers.isPowered && !isInvinciblePower)
+            {
+                canDamage = false;
+                powers.isNormalState();
+            }
+        }
+
+        //dead if outside of Game
+
+        if (col.gameObject.tag == "morte_imediata_Chao")
+        {
+            if (canDamage)
+            {
+                canDamage = false;
+                //remove all health and die
+                TakeDamage(maxHealth);
+                Die();
+            }
+        }
+
+    }
+
+    private void OnCollisionEnter2D(Collision2D col)
+    {
+        if (col.gameObject.CompareTag("enemy"))
+        {
+            if (canDamage && isExplode == false && powers.isPowered == false && !isInvinciblePower)
+            {
+                AudioManager.instance.PlayOneShot(FMODEvents.instance.Hurt);
+                TakeDamage(5);
+                canDamage = false;
+                playerColor.color = UnityEngine.Color.red;
+                //can die if currentHealth is <=0
+                if (currentHealth <= 0)
+                {
+                    Die();
+                }
+            }
+            if (canDamage && !isExplode && powers.isPowered)
+            {
+                powers.isNormalState();
+            }
+        }
+
+        //imediate dead enemies
+        if (col.gameObject.tag == "morte_imediata")
+        {
+            if (canDamage && !isExplode && !powers.isPowered && !isInvinciblePower)
+            {
+                canDamage = false;
+                //remove all health and die
+                TakeDamage(maxHealth);
+                Die();
+            }
+            if (canDamage && !isExplode && powers.isPowered && !isInvinciblePower)
+            {
+                canDamage = false;
+                powers.isNormalState();
+            }
+        }
+
+        //dead laser
+        if (col.gameObject.tag == "Laser")
+        {
+            if (canDamage && !isExplode && !powers.isPowered && !isInvinciblePower)
+            {
+                canDamage = false;
+                //remove all health and die
+                TakeDamage(maxHealth);
+                Die();
+            }
+            if (canDamage && !isExplode && powers.isPowered && !isInvinciblePower)
+            {
+                canDamage = false;
+                powers.isNormalState();
+            }
+        }
+
+        //dead if outside of Game
+
+        if (col.gameObject.tag == "morte_imediata_Chao")
+        {
+            if (canDamage)
+            {
+                canDamage = false;
+                //remove all health and die
+                TakeDamage(maxHealth);
+                Die();
+            }
+        }
+
+    }
+
+    private void OnCollisionStay2D(Collision2D col)
+    {
+        if (col.gameObject.CompareTag("enemy"))
+        {
+            if (canDamage && isExplode == false && powers.isPowered == false && !isInvinciblePower)
+            {
+                AudioManager.instance.PlayOneShot(FMODEvents.instance.Hurt);
+                TakeDamage(5);
+                canDamage = false;
+                playerColor.color = UnityEngine.Color.red;
+                //can die if currentHealth is <=0
+                if (currentHealth <= 0)
+                {
+                    Die();
+                }
+            }
+            if (canDamage && !isExplode && powers.isPowered)
+            {
+                powers.isNormalState();
+            }
+        }
+        //imediate dead enemies
+        if (col.gameObject.tag == "morte_imediata")
+        {
+            if (canDamage && !isExplode && !powers.isPowered && !isInvinciblePower)
+            {
+                canDamage = false;
+                //remove all health and die
+                TakeDamage(maxHealth);
+                Die();
+            }
+            if (canDamage && !isExplode && powers.isPowered && !isInvinciblePower)
+            {
+                canDamage = false;
+                powers.isNormalState();
+            }
+        }
+
+        //dead laser
+        if (col.gameObject.tag == "Laser")
+        {
+            if (canDamage && !isExplode && !powers.isPowered && !isInvinciblePower)
+            {
+                canDamage = false;
+                //remove all health and die
+                TakeDamage(maxHealth);
+                Die();
+            }
+            if (canDamage && !isExplode && powers.isPowered && !isInvinciblePower)
+            {
+                canDamage = false;
+                powers.isNormalState();
+            }
+        }
+
+        //dead if outside of Game
+
+        if (col.gameObject.tag == "morte_imediata_Chao")
+        {
+            if (canDamage)
+            {
+                canDamage = false;
+                //remove all health and die
+                TakeDamage(maxHealth);
+                Die();
+            }
+        }
+
+    }
+
 }

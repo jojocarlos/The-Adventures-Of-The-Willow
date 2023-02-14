@@ -88,10 +88,11 @@ public class PlayerData : ScriptableObject
 	[Header("Ladder")]
     public float speedladder = 8f;
 
-    [Header("Trampolinm")]
+    [Header("Trampolim")]
     public float TrampolineJumpForce;
 
 	public float jumpStompEnemy;
+
 
     //Unity Callback, called when the inspector updates
     private void OnValidate()

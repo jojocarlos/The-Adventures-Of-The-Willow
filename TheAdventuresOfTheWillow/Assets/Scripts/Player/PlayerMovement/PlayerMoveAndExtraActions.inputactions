@@ -58,6 +58,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "Bash",
+                    "type": "Button",
+                    "id": "e8a03611-b41b-4282-84e4-83f4b47ad557",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -240,11 +249,22 @@
                 {
                     "name": "",
                     "id": "496c7d38-dc7a-479f-a06f-c6585927ee02",
-                    "path": "<Keyboard>/b",
+                    "path": "<Keyboard>/v",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
                     "action": "Dash",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "f648290b-31a7-4a91-939c-26bea32da257",
+                    "path": "<Keyboard>/b",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Bash",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

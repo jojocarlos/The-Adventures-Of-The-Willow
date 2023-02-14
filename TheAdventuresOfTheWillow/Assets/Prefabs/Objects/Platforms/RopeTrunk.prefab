@@ -395,7 +395,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 441670063
-  m_SortingLayer: -6
+  m_SortingLayer: -7
   m_SortingOrder: 5
   m_Sprite: {fileID: 21300000, guid: 776025fea3ac8444089568803e20d526, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -526,12 +526,12 @@ GameObject:
   m_Component:
   - component: {fileID: 9033463239970553435}
   - component: {fileID: 9033463239970553432}
-  - component: {fileID: 9033463239970553433}
   - component: {fileID: 9033463239970553437}
   - component: {fileID: 9033463239970553434}
   - component: {fileID: 9033463239970553436}
   - component: {fileID: 9033463239970553438}
   - component: {fileID: 9033463239970553424}
+  - component: {fileID: 8027831525427090323}
   m_Layer: 6
   m_Name: Forest_Decor_05_0
   m_TagString: MovingPlatform
@@ -606,117 +606,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!60 &9033463239970553433
-PolygonCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9033463239970553414}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 1
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 11.880001, y: 3.2100003}
-    newSize: {x: 11.880001, y: 3.2100003}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: 1.3246877, y: -0.8451176}
-      - {x: 1.134258, y: -0.77187544}
-      - {x: 1.5297658, y: -0.77187544}
-      - {x: 1.7641408, y: -0.7279301}
-      - {x: 2.0424612, y: -0.6693364}
-      - {x: 2.2768362, y: -0.65468794}
-      - {x: 2.540508, y: -0.62539107}
-      - {x: 2.8627737, y: -0.522852}
-      - {x: 3.3901174, y: -0.522852}
-      - {x: 3.4633596, y: -0.4935551}
-      - {x: 3.9907036, y: -0.46425822}
-      - {x: 4.2836723, y: -0.43496135}
-      - {x: 4.8549614, y: -0.43496135}
-      - {x: 5.14793, y: -0.39101604}
-      - {x: 5.250469, y: -0.3324223}
-      - {x: 5.235821, y: 0.20956995}
-      - {x: 5.2211723, y: 0.2974606}
-      - {x: 5.704571, y: 0.66367155}
-      - {x: 5.704571, y: 0.9859372}
-      - {x: 5.6020317, y: 1.0884763}
-      - {x: 5.704571, y: 1.2056638}
-      - {x: 5.704571, y: 1.2935544}
-      - {x: 5.5873833, y: 1.3521482}
-      - {x: 4.9867973, y: 1.3521482}
-      - {x: 4.444805, y: 1.2935544}
-      - {x: 4.063946, y: 1.2496091}
-      - {x: 3.74168, y: 1.2203122}
-      - {x: 3.5512502, y: 1.1763669}
-      - {x: 3.3315237, y: 1.1763669}
-      - {x: 3.1703908, y: 1.1617185}
-      - {x: 3.038555, y: 1.1031247}
-      - {x: 2.7309377, y: 1.0591794}
-      - {x: 2.306133, y: 0.9859372}
-      - {x: 1.8959768, y: 0.94199187}
-      - {x: 1.3832815, y: 0.89804655}
-      - {x: 0.73875016, y: 0.82480437}
-      - {x: -0.18410148, y: 0.6929684}
-      - {x: -0.7260937, y: 0.61972624}
-      - {x: -1.0483594, y: 0.59042937}
-      - {x: -1.7221875, y: 0.5757809}
-      - {x: -1.7954297, y: 0.59042937}
-      - {x: -2.1909375, y: 0.6343747}
-      - {x: -3.113789, y: 0.6343747}
-      - {x: -3.3628125, y: 0.66367155}
-      - {x: -3.904805, y: 0.5171872}
-      - {x: -4.2270703, y: 0.47324184}
-      - {x: -4.9008985, y: 0.37070277}
-      - {x: -5.3989453, y: 0.35605434}
-      - {x: -5.838399, y: 0.31210902}
-      - {x: -5.867696, y: 0.25351527}
-      - {x: -5.867696, y: 0.16562463}
-      - {x: -5.838399, y: 0.1509762}
-      - {x: -5.6040235, y: 0.12167931}
-      - {x: -5.5307813, y: -0.50820357}
-      - {x: -5.4721875, y: -0.69863325}
-      - {x: -5.413594, y: -0.757227}
-      - {x: -5.179219, y: -0.9037114}
-      - {x: -4.959492, y: -0.93300825}
-      - {x: -4.622578, y: -0.9183598}
-      - {x: -4.446797, y: -0.93300825}
-      - {x: -4.0952344, y: -1.0501958}
-      - {x: -3.611836, y: -1.1087896}
-      - {x: -3.3921094, y: -1.1087896}
-      - {x: -3.2309766, y: -1.123438}
-      - {x: -3.0258985, y: -1.0355474}
-      - {x: -2.645039, y: -1.0062505}
-      - {x: -2.5864453, y: -1.0648443}
-      - {x: -2.337422, y: -1.0941411}
-      - {x: -2.103047, y: -1.0501958}
-      - {x: -1.736836, y: -1.0355474}
-      - {x: -1.5757031, y: -1.0941411}
-      - {x: -1.2534375, y: -1.123438}
-      - {x: -1.0044141, y: -1.1380864}
-      - {x: -0.66749996, y: -1.1087896}
-      - {x: -0.25734368, y: -1.1087896}
-      - {x: 0.05027354, y: -1.0062505}
-      - {x: 0.12351573, y: -0.9476567}
-      - {x: 0.2260548, y: -1.0648443}
-      - {x: 0.50437516, y: -1.2259771}
-      - {x: 0.69480485, y: -1.2699224}
-      - {x: 1.0170705, y: -1.3871099}
-      - {x: 1.266094, y: -1.4164068}
-      - {x: 1.4125783, y: -1.4164068}
-      - {x: 1.6176565, y: -1.0941411}
-      - {x: 1.6323049, y: -1.0062505}
-      - {x: 1.5151174, y: -0.9037114}
 --- !u!50 &9033463239970553437
 Rigidbody2D:
   serializedVersion: 4
@@ -798,7 +687,7 @@ PlatformEffector2D:
   m_ColliderMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_RotationalOffset: 0
+  m_RotationalOffset: 4.6
   m_UseOneWay: 1
   m_UseOneWayGrouping: 0
   m_SurfaceArc: 162.7
@@ -816,6 +705,28 @@ ConstantForce2D:
   m_Force: {x: 15, y: 0}
   m_RelativeForce: {x: 1, y: 0}
   m_Torque: 3
+--- !u!68 &8027831525427090323
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9033463239970553414}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 1
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_EdgeRadius: 0
+  m_Points:
+  - {x: -5.7865205, y: 0.054727167}
+  - {x: 5.6138563, y: 1.2350276}
+  m_AdjacentStartPoint: {x: 0, y: 0}
+  m_AdjacentEndPoint: {x: 0, y: 0}
+  m_UseAdjacentStartPoint: 0
+  m_UseAdjacentEndPoint: 0
 --- !u!1 &9033463240062714143
 GameObject:
   m_ObjectHideFlags: 0
@@ -1913,7 +1824,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 441670063
-  m_SortingLayer: -6
+  m_SortingLayer: -7
   m_SortingOrder: 5
   m_Sprite: {fileID: 21300000, guid: 776025fea3ac8444089568803e20d526, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

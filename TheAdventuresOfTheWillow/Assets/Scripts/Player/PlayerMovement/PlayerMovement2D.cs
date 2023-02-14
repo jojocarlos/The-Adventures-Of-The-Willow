@@ -8,6 +8,7 @@
 
 using FMOD.Studio;
 using System.Collections;
+using Unity.Services.Lobbies.Models;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -86,7 +87,7 @@ public class PlayerMovement2D : MonoBehaviour, IDataPersistence
 
 
     [Header("ladder")]
-    private float vertical;
+    public float vertical;
     public bool isLadder;
     public bool isClimbing;
 
@@ -135,6 +136,7 @@ public class PlayerMovement2D : MonoBehaviour, IDataPersistence
     public float KnockBackLength;
 
     public bool KnockFromRight;
+
 
     private void Awake()
 	{
@@ -192,6 +194,7 @@ public class PlayerMovement2D : MonoBehaviour, IDataPersistence
 
     private void Update()
 	{
+
 		//fix player rotation on platform rotation
 		if (!Swimming)
 		{
@@ -863,8 +866,6 @@ public class PlayerMovement2D : MonoBehaviour, IDataPersistence
 	}
     #endregion
 
-
-
     private void OnTriggerEnter2D(Collider2D col)
     {
         if (col.gameObject.CompareTag("water"))
@@ -958,6 +959,7 @@ public class PlayerMovement2D : MonoBehaviour, IDataPersistence
         {
             transform.parent = col.gameObject.transform;
         }
+
 
     }
 

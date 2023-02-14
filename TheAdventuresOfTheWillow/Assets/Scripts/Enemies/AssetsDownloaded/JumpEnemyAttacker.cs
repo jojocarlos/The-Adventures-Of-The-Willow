@@ -42,7 +42,8 @@ public class JumpEnemyAttacker : MonoBehaviour
         stompEnemy = GetComponentInChildren<StompEnemy>();
 		thisObject = GetComponent<GameObject>();
 		
-		audioPlayed = false;    
+		audioPlayed = false;
+        player = PlayerMovement2D.PlayerMovement2Dinstance.transform;
     }
 
     void Update()
@@ -175,6 +176,18 @@ public class JumpEnemyAttacker : MonoBehaviour
                 audioPlayed = true;
             }
             Killed();
+        }
+        if(col.gameObject.CompareTag("Player"))
+        {
+            PlayerMovement2D.PlayerMovement2Dinstance.KnockBackCount = PlayerMovement2D.PlayerMovement2Dinstance.KnockBackLength;
+            if (col.transform.position.x < transform.position.x)
+            {
+                PlayerMovement2D.PlayerMovement2Dinstance.KnockFromRight = true;
+            }
+            else
+            {
+                PlayerMovement2D.PlayerMovement2Dinstance.KnockFromRight = false;
+            }
         }
     }
 	

@@ -58,3 +58,6 @@ MonoBehaviour:
   speedladder: 8
   TrampolineJumpForce: 0
   jumpStompEnemy: 0
+  Raduis: 3
+  BashPower: 100
+  BashTime: 5

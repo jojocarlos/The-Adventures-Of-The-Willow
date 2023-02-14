@@ -270,7 +270,7 @@ public class CaptainMushroomRed : MonoBehaviour
         if (col.gameObject.CompareTag("Player"))
         {
             PlayerMovement2D.PlayerMovement2Dinstance.KnockBackCount = PlayerMovement2D.PlayerMovement2Dinstance.KnockBackLength;
-            if(col.transform.position.x < transform.position.x)
+            if (col.transform.position.x < transform.position.x)
             {
                 PlayerMovement2D.PlayerMovement2Dinstance.KnockFromRight = true;
             }

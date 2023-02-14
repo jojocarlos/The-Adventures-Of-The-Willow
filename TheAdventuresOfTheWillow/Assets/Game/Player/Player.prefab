@@ -303,6 +303,7 @@ Transform:
   - {fileID: 6674886892248063303}
   - {fileID: 6674886890373006346}
   - {fileID: 10868347}
+  - {fileID: 3331986245169947291}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -397,7 +398,7 @@ MonoBehaviour:
   - m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 2066404367309902279}
-        m_TargetAssemblyTypeName: PlayerMovement, Assembly-CSharp
+        m_TargetAssemblyTypeName: PlayerMovement2D, Assembly-CSharp
         m_MethodName: Jump
         m_Mode: 0
         m_Arguments:
@@ -502,6 +503,62 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 76a574d7-a70b-4351-b6f3-f5fe10eaa516
     m_ActionName: PlayerActions/Dash[/Keyboard/b]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 47ea9c44-5191-44fe-92bc-16dabaf9896b
+    m_ActionName: UI/ScrollWheel[/Mouse/scroll]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 3448118a-2f42-47cc-998a-700a2b6e28d8
+    m_ActionName: UI/MiddleClick[/Mouse/middleButton]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: d08ba64d-412c-4aab-bce3-c69868eda164
+    m_ActionName: UI/RightClick[/Mouse/rightButton]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 1e2caca0-cf19-485c-9f1d-09ac18b0637a
+    m_ActionName: UI/TrackedDevicePosition
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: d7c86658-a128-4f82-adbb-ecf3d2cc9a4a
+    m_ActionName: UI/TrackedDeviceOrientation
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 6faf81c3-c32e-469f-960a-ccf83fd7e423
+    m_ActionName: UI/Click[/Mouse/leftButton,/Pen/tip,/Touchscreen/touch0/press,/Touchscreen/touch1/press,/Touchscreen/touch2/press,/Touchscreen/touch3/press,/Touchscreen/touch4/press,/Touchscreen/touch5/press,/Touchscreen/touch6/press,/Touchscreen/touch7/press,/Touchscreen/touch8/press,/Touchscreen/touch9/press]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 0f1fd974-f404-42d6-98f9-09b3c0b095c3
+    m_ActionName: UI/Point[/Mouse/position,/Pen/position,/Touchscreen/touch0/position,/Touchscreen/touch1/position,/Touchscreen/touch2/position,/Touchscreen/touch3/position,/Touchscreen/touch4/position,/Touchscreen/touch5/position,/Touchscreen/touch6/position,/Touchscreen/touch7/position,/Touchscreen/touch8/position,/Touchscreen/touch9/position]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 8a6786f6-64ff-482e-8681-e32492e18716
+    m_ActionName: UI/Cancel[/Keyboard/escape]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 5390dc66-56dd-4b1a-a6a3-3bb96571f3f5
+    m_ActionName: UI/Submit[/Keyboard/enter]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 894fbe48-b3f6-4c3c-8a9b-52f05fa78635
+    m_ActionName: UI/Navigate[/Keyboard/w,/Keyboard/upArrow,/Keyboard/s,/Keyboard/downArrow,/Keyboard/a,/Keyboard/leftArrow,/Keyboard/d,/Keyboard/rightArrow]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: PlayerBash, Assembly-CSharp
+        m_MethodName: Bash
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: e8a03611-b41b-4282-84e4-83f4b47ad557
+    m_ActionName: PlayerActions/Bash[/Keyboard/b]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: PlayerActions
@@ -531,9 +588,11 @@ MonoBehaviour:
   _groundLayer:
     serializedVersion: 2
     m_Bits: 71303360
+  vertical: 0
   isLadder: 0
   isClimbing: 0
   isOnWater: 0
+  waterTop: 0
   Swimming: 0
   withFriction: {fileID: 6200000, guid: 7524e06eb6bccd4419520e0c475e6243, type: 2}
   noFrictionNormal0: {fileID: 6200000, guid: 7cd774f1cab18954ab27d36691ceb528, type: 2}
@@ -543,9 +602,9 @@ MonoBehaviour:
   PlayerTrans: {fileID: 2066404367309902308}
   zRotation: 0
   isDead: 0
-  KnockBack: 0
+  KnockBack: 10
   KnockBackCount: 0
-  KnockBackLength: 0
+  KnockBackLength: 0.2
   KnockFromRight: 0
 --- !u!114 &2066404367309902276
 MonoBehaviour:
@@ -845,6 +904,54 @@ Transform:
   m_Father: {fileID: 2066404367309902308}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &5223401233349918917
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3331986245169947291}
+  - component: {fileID: 7148398625920662414}
+  m_Layer: 24
+  m_Name: Foots
+  m_TagString: PlayerFoots
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3331986245169947291
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5223401233349918917}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2066404367309902308}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!70 &7148398625920662414
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5223401233349918917}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.005513353, y: -1.3508211}
+  m_Size: {x: 1.2426003, y: 0.19502166}
+  m_Direction: 1
 --- !u!1 &6674886890373006347
 GameObject:
   m_ObjectHideFlags: 0

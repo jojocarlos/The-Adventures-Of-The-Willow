@@ -42,6 +42,8 @@ TagManager:
   - Spirit
   - BossEnter
   - waterTop
+  - Shot
+  - GroundPlatform
   layers:
   - Default
   - TransparentFX

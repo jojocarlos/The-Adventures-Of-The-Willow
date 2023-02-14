@@ -80,6 +80,15 @@ public partial class @PlayerMoveAndExtraActions : IInputActionCollection2, IDisp
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Bash"",
+                    ""type"": ""Button"",
+                    ""id"": ""e8a03611-b41b-4282-84e4-83f4b47ad557"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -262,11 +271,22 @@ public partial class @PlayerMoveAndExtraActions : IInputActionCollection2, IDisp
                 {
                     ""name"": """",
                     ""id"": ""496c7d38-dc7a-479f-a06f-c6585927ee02"",
-                    ""path"": ""<Keyboard>/b"",
+                    ""path"": ""<Keyboard>/v"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""Dash"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""f648290b-31a7-4a91-939c-26bea32da257"",
+                    ""path"": ""<Keyboard>/b"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Bash"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -986,6 +1006,7 @@ public partial class @PlayerMoveAndExtraActions : IInputActionCollection2, IDisp
         m_PlayerActions_Grab = m_PlayerActions.FindAction("Grab", throwIfNotFound: true);
         m_PlayerActions_Enter = m_PlayerActions.FindAction("Enter", throwIfNotFound: true);
         m_PlayerActions_Dash = m_PlayerActions.FindAction("Dash", throwIfNotFound: true);
+        m_PlayerActions_Bash = m_PlayerActions.FindAction("Bash", throwIfNotFound: true);
         // MenuLevelSelect
         m_MenuLevelSelect = asset.FindActionMap("MenuLevelSelect", throwIfNotFound: true);
         m_MenuLevelSelect_CameraMovement = m_MenuLevelSelect.FindAction("CameraMovement", throwIfNotFound: true);
@@ -1069,6 +1090,7 @@ public partial class @PlayerMoveAndExtraActions : IInputActionCollection2, IDisp
     private readonly InputAction m_PlayerActions_Grab;
     private readonly InputAction m_PlayerActions_Enter;
     private readonly InputAction m_PlayerActions_Dash;
+    private readonly InputAction m_PlayerActions_Bash;
     public struct PlayerActionsActions
     {
         private @PlayerMoveAndExtraActions m_Wrapper;
@@ -1079,6 +1101,7 @@ public partial class @PlayerMoveAndExtraActions : IInputActionCollection2, IDisp
         public InputAction @Grab => m_Wrapper.m_PlayerActions_Grab;
         public InputAction @Enter => m_Wrapper.m_PlayerActions_Enter;
         public InputAction @Dash => m_Wrapper.m_PlayerActions_Dash;
+        public InputAction @Bash => m_Wrapper.m_PlayerActions_Bash;
         public InputActionMap Get() { return m_Wrapper.m_PlayerActions; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -1106,6 +1129,9 @@ public partial class @PlayerMoveAndExtraActions : IInputActionCollection2, IDisp
                 @Dash.started -= m_Wrapper.m_PlayerActionsActionsCallbackInterface.OnDash;
                 @Dash.performed -= m_Wrapper.m_PlayerActionsActionsCallbackInterface.OnDash;
                 @Dash.canceled -= m_Wrapper.m_PlayerActionsActionsCallbackInterface.OnDash;
+                @Bash.started -= m_Wrapper.m_PlayerActionsActionsCallbackInterface.OnBash;
+                @Bash.performed -= m_Wrapper.m_PlayerActionsActionsCallbackInterface.OnBash;
+                @Bash.canceled -= m_Wrapper.m_PlayerActionsActionsCallbackInterface.OnBash;
             }
             m_Wrapper.m_PlayerActionsActionsCallbackInterface = instance;
             if (instance != null)
@@ -1128,6 +1154,9 @@ public partial class @PlayerMoveAndExtraActions : IInputActionCollection2, IDisp
                 @Dash.started += instance.OnDash;
                 @Dash.performed += instance.OnDash;
                 @Dash.canceled += instance.OnDash;
+                @Bash.started += instance.OnBash;
+                @Bash.performed += instance.OnBash;
+                @Bash.canceled += instance.OnBash;
             }
         }
     }
@@ -1302,6 +1331,7 @@ public partial class @PlayerMoveAndExtraActions : IInputActionCollection2, IDisp
         void OnGrab(InputAction.CallbackContext context);
         void OnEnter(InputAction.CallbackContext context);
         void OnDash(InputAction.CallbackContext context);
+        void OnBash(InputAction.CallbackContext context);
     }
     public interface IMenuLevelSelectActions
     {

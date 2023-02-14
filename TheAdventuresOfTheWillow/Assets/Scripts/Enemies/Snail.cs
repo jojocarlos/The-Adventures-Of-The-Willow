@@ -375,14 +375,14 @@ public class Snail : MonoBehaviour
         }
         if (other.gameObject.CompareTag("Player"))
         {
-            playerMovement2D.KnockBackCount = playerMovement2D.KnockBackLength;
-            if(other.transform.position.x < transform.position.x)
+            PlayerMovement2D.PlayerMovement2Dinstance.KnockBackCount = PlayerMovement2D.PlayerMovement2Dinstance.KnockBackLength;
+            if (other.transform.position.x < transform.position.x)
             {
-                playerMovement2D.KnockFromRight = true;
+                PlayerMovement2D.PlayerMovement2Dinstance.KnockFromRight = true;
             }
             else
             {
-                playerMovement2D.KnockFromRight = false;
+                PlayerMovement2D.PlayerMovement2Dinstance.KnockFromRight = false;
             }
         }
     }
