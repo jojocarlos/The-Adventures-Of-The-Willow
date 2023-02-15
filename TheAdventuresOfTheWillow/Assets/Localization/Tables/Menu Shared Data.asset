@@ -139,6 +139,26 @@ MonoBehaviour:
     m_Key: Cancel
     m_Metadata:
       m_Items: []
+  - m_Id: 30017973917016064
+    m_Key: English
+    m_Metadata:
+      m_Items: []
+  - m_Id: 30018144763600896
+    m_Key: French
+    m_Metadata:
+      m_Items: []
+  - m_Id: 30018247842816000
+    m_Key: Italian
+    m_Metadata:
+      m_Items: []
+  - m_Id: 30018337433149440
+    m_Key: Portuguese
+    m_Metadata:
+      m_Items: []
+  - m_Id: 30018733375447040
+    m_Key: Spanish
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

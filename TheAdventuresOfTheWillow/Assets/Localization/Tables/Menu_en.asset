@@ -143,6 +143,26 @@ MonoBehaviour:
     m_Localized: Cancel
     m_Metadata:
       m_Items: []
+  - m_Id: 30017973917016064
+    m_Localized: E n g l i s h
+    m_Metadata:
+      m_Items: []
+  - m_Id: 30018144763600896
+    m_Localized: F r e n c h
+    m_Metadata:
+      m_Items: []
+  - m_Id: 30018247842816000
+    m_Localized: I t a l i a n
+    m_Metadata:
+      m_Items: []
+  - m_Id: 30018337433149440
+    m_Localized: P o r t u g u e s e
+    m_Metadata:
+      m_Items: []
+  - m_Id: 30018733375447040
+    m_Localized: S p a n h i s h
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

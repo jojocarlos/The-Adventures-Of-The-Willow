@@ -9,21 +9,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
-  m_Name: Menu_fr
+  m_Script: {fileID: 11500000, guid: 97269afb30aa84742ae3f3342603618a, type: 3}
+  m_Name: LocalizationFlags_it
   m_EditorClassIdentifier: 
   m_LocaleId:
-    m_Code: fr
-  m_SharedData: {fileID: 11400000, guid: 0a05fe64be27bd348bf80244904fbd43, type: 2}
+    m_Code: it
+  m_SharedData: {fileID: 11400000, guid: d8051272c479e9d4996ee30ed4afbd88, type: 2}
   m_Metadata:
     m_Items: []
   m_TableData:
-  - m_Id: 340033370062848
-    m_Localized: X
-    m_Metadata:
-      m_Items: []
-  - m_Id: 30017973917016064
-    m_Localized: 
+  - m_Id: 921601007616
+    m_Localized: e3f21b36b161f1b448787e477b4f3d2d
     m_Metadata:
       m_Items: []
   references:

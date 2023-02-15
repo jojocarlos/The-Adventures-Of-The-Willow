@@ -3,10 +3,11 @@ using System.Collections;
 
 public class fireball : MonoBehaviour
 {
-    public string Player = "Ignored";
-    public Rigidbody2D rb;
-    public GameObject exploson;
-    public Vector2 velocity;
+    [SerializeField] private string Player = "Ignored";
+    [SerializeField] private Rigidbody2D rb;
+    [SerializeField] private GameObject exploson;
+    [SerializeField] private Vector2 velocity;
+    [SerializeField] private float degrees;
 
 
     // Use this for initialization
@@ -42,9 +43,12 @@ public class fireball : MonoBehaviour
         }
 
         
-        if (col.contacts[0].normal.x<0.1f)
+        if (col.contacts[0].normal.x != 0)
         {
-            Explode();
+            if (Vector2.Angle(col.contacts[0].normal, Vector2.up) > degrees)
+            {
+                Explode();
+            }
         }
 
         if (col.gameObject.tag == Player)

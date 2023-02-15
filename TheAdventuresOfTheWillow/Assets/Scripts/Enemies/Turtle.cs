@@ -21,7 +21,6 @@ public class Turtle : MonoBehaviour
     public float moveSpeed = 5f;
     private SpriteRenderer enemySprite;
     public GameObject objectToScale;
-    public GameObject objectToScale2;
 
 
     void Start()
@@ -83,7 +82,6 @@ public class Turtle : MonoBehaviour
         }
 
         objectToScale.transform.localScale = newScale;
-        objectToScale2.transform.localScale = newScale;
 
         facingDirection = newDirection;
     }

@@ -980,7 +980,7 @@ MonoBehaviour:
   Path: ../FMOD/Projects/Willow/Build/Desktop/Ambience.assets.bank
   Name: Ambience.assets
   StudioPath: bank:/Ambience.assets
-  lastModified: 638117428891279078
+  lastModified: 638120727517682131
   FileSizes:
   - Name: Desktop
     Value: 8795296
@@ -1706,12 +1706,12 @@ MonoBehaviour:
   Path: ../FMOD/Projects/Willow/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638117428891569081
+  lastModified: 638120727519382263
   FileSizes:
   - Name: Desktop
-    Value: 21910
+    Value: 22706
   - Name: Mobile
-    Value: 21910
+    Value: 22706
   Exists: 1
 --- !u!114 &-2265006922091938680
 MonoBehaviour:
@@ -1750,7 +1750,7 @@ MonoBehaviour:
   Path: ../FMOD/Projects/Willow/Build/Desktop/Master.assets.bank
   Name: Master.assets
   StudioPath: bank:/Master.assets
-  lastModified: 638117428892824295
+  lastModified: 638120727522520225
   FileSizes:
   - Name: Desktop
     Value: 12490944
@@ -1880,7 +1880,7 @@ MonoBehaviour:
   Path: ../FMOD/Projects/Willow/Build/Desktop/SFX.assets.bank
   Name: SFX.assets
   StudioPath: bank:/SFX.assets
-  lastModified: 638117428893845109
+  lastModified: 638120727526210505
   FileSizes:
   - Name: Desktop
     Value: 2044480
@@ -2089,7 +2089,7 @@ MonoBehaviour:
   - {fileID: -2281873765650015644}
   StringsBanks:
   - {fileID: 5280939037303829309}
-  cacheTime: 638117428893845109
+  cacheTime: 638120727526210505
   cacheVersion: 131601
 --- !u!114 &121352554842827011
 MonoBehaviour:
@@ -2160,7 +2160,7 @@ MonoBehaviour:
   Path: ../FMOD/Projects/Willow/Build/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 638117428893229435
+  lastModified: 638120727524610379
   FileSizes:
   - Name: Desktop
     Value: 31088
@@ -2524,7 +2524,7 @@ MonoBehaviour:
   Path: ../FMOD/Projects/Willow/Build/Desktop/Ambience.bank
   Name: Ambience
   StudioPath: bank:/Ambience
-  lastModified: 638117428890489000
+  lastModified: 638120727516412006
   FileSizes:
   - Name: Desktop
     Value: 10066
@@ -3262,7 +3262,7 @@ MonoBehaviour:
   Path: ../FMOD/Projects/Willow/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638117428892864314
+  lastModified: 638120727522550227
   FileSizes:
   - Name: Desktop
     Value: 3128

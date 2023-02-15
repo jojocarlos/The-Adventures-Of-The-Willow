@@ -53,7 +53,7 @@ public class PlantLookShoot : MonoBehaviour
 	{
         AudioManager.instance.PlayOneShot(FMODEvents.instance.PlantShoot, this.transform.position);
         Anim.SetTrigger("Shoot");
-	    GameObject BulletIns = Instantiate(Bullet, ShootPoint.position, ShootPoint.rotation);
+	    GameObject BulletIns = Instantiate(Bullet, ShootPoint.transform.position, Quaternion.identity);
         BulletIns.GetComponent<Rigidbody2D>().AddForce(Direction * Force);		
 	}
 	
