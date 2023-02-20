@@ -12,8 +12,12 @@ public class LoadScenes : MonoBehaviour
     {
         SceneManager.LoadScene(name);
     }
-	
-	public void QuitGame()
+    public void loadSceneAdditive(string name)
+    {
+        SceneManager.LoadScene(name, LoadSceneMode.Additive);
+    }
+
+    public void QuitGame()
 	{
 		Application.Quit();
 	}

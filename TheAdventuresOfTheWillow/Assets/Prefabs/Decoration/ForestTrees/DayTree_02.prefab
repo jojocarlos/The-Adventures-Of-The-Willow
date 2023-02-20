@@ -180,7 +180,7 @@ GameObject:
   - component: {fileID: 4624589061450777501}
   m_Layer: 0
   m_Name: Light 2D (1)
-  m_TagString: Untagged
+  m_TagString: Lights
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -192,7 +192,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2445914190637660391}
-  m_LocalRotation: {x: -0, y: -0, z: 0.99931616, w: -0.03697698}
+  m_LocalRotation: {x: -0, y: -0, z: 0.999562, w: -0.02959481}
   m_LocalPosition: {x: 1.6, y: 18.86, z: 15.044473}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -217,7 +217,7 @@ MonoBehaviour:
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.68
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 1
+  m_Intensity: 1.6
   m_LightVolumeIntensity: 1
   m_LightVolumeIntensityEnabled: 0
   m_ApplyToSortingLayers: af59531a5d3232cee7e14bc49bc5848d
@@ -226,8 +226,8 @@ MonoBehaviour:
   m_LightOrder: 0
   m_AlphaBlendOnOverlap: 0
   m_OverlapOperation: 0
-  m_NormalMapDistance: 3
-  m_NormalMapQuality: 2
+  m_NormalMapDistance: 3.51
+  m_NormalMapQuality: 1
   m_UseNormalMap: 0
   m_ShadowIntensityEnabled: 0
   m_ShadowIntensity: 0.75
@@ -268,7 +268,7 @@ MonoBehaviour:
   m_PointLightInnerAngle: 92
   m_PointLightOuterAngle: 108.85
   m_PointLightInnerRadius: 4.44
-  m_PointLightOuterRadius: 13.854013
+  m_PointLightOuterRadius: 15.774353
   m_ShapeLightParametricSides: 5
   m_ShapeLightParametricAngleOffset: 0
   m_ShapeLightParametricRadius: 1
@@ -325,7 +325,7 @@ GameObject:
   - component: {fileID: 2812353962879445687}
   m_Layer: 0
   m_Name: SunSpot
-  m_TagString: Untagged
+  m_TagString: SunSpots
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -371,8 +371,8 @@ MonoBehaviour:
   m_LightOrder: 0
   m_AlphaBlendOnOverlap: 0
   m_OverlapOperation: 0
-  m_NormalMapDistance: 3
-  m_NormalMapQuality: 2
+  m_NormalMapDistance: 0.65
+  m_NormalMapQuality: 1
   m_UseNormalMap: 0
   m_ShadowIntensityEnabled: 0
   m_ShadowIntensity: 0.75
@@ -2134,7 +2134,7 @@ GameObject:
   - component: {fileID: 1389766353784244263}
   m_Layer: 0
   m_Name: SunSpot (1)
-  m_TagString: Untagged
+  m_TagString: SunSpots
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2180,8 +2180,8 @@ MonoBehaviour:
   m_LightOrder: 0
   m_AlphaBlendOnOverlap: 0
   m_OverlapOperation: 0
-  m_NormalMapDistance: 3
-  m_NormalMapQuality: 2
+  m_NormalMapDistance: 0.65
+  m_NormalMapQuality: 1
   m_UseNormalMap: 0
   m_ShadowIntensityEnabled: 0
   m_ShadowIntensity: 0.75
@@ -3859,7 +3859,7 @@ GameObject:
   - component: {fileID: 4621059098432989885}
   m_Layer: 0
   m_Name: LightShafts
-  m_TagString: Untagged
+  m_TagString: Setters
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7522,7 +7522,7 @@ GameObject:
   - component: {fileID: 897797858379727821}
   m_Layer: 0
   m_Name: Light 2D
-  m_TagString: Untagged
+  m_TagString: Lights
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7559,7 +7559,7 @@ MonoBehaviour:
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.68
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 1
+  m_Intensity: 1.6
   m_LightVolumeIntensity: 1
   m_LightVolumeIntensityEnabled: 0
   m_ApplyToSortingLayers: af59531a5d3232cee7e14bc49bc5848d
@@ -7568,8 +7568,8 @@ MonoBehaviour:
   m_LightOrder: 0
   m_AlphaBlendOnOverlap: 0
   m_OverlapOperation: 0
-  m_NormalMapDistance: 3
-  m_NormalMapQuality: 2
+  m_NormalMapDistance: 3.51
+  m_NormalMapQuality: 1
   m_UseNormalMap: 0
   m_ShadowIntensityEnabled: 0
   m_ShadowIntensity: 0.75

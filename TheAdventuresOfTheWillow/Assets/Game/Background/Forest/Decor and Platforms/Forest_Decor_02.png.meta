@@ -389,7 +389,9 @@ TextureImporter:
     indices: 
     edges: []
     weights: []
-    secondaryTextures: []
+    secondaryTextures:
+    - texture: {fileID: 2800000, guid: cc452c0321c220349b74692b056240c8, type: 3}
+      name: _NormalMap
     nameFileIdTable:
       Forest_Decor_02_11: -1510312241
       Forest_Decor_02_9: 1127090390

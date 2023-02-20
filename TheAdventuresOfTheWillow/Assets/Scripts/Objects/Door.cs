@@ -3,63 +3,102 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Door : MonoBehaviour
+public class Door : MonoBehaviour, IDataPersistence
 {
+    //same doorID;
+    [SerializeField] private string id;
+
     private KeyFollow thePlayer;
 
-    public SpriteRenderer theSR;
-    public Sprite doorOpenSprite;
+    public int doorID;
 
-    public bool doorOpen, waitingToOpen;
+    [SerializeField] private SpriteRenderer theSR;
+    [SerializeField] private Sprite doorOpenSprite;
 
-    public ParticleSystem collectEffect;
-	public Animator AnimKeyOpen;
-    public float seconds = 3f;
-	
-    // Start is called before the first frame update
+    [SerializeField] private bool doorOpen, waitingToOpen;
+
+    [SerializeField] private ParticleSystem collectEffect;
+    [SerializeField] private Animator AnimKeyOpen;
+    [SerializeField] private float seconds = 3f;
+    [SerializeField] private string nameSceneToLoad;
+
     void Start()
     {
         thePlayer = FindObjectOfType<KeyFollow>();
     }
 
-    // Update is called once per frame
     void Update()
     {
-        if (waitingToOpen)
+        if (waitingToOpen && !doorOpen)
         {
-            if(Vector3.Distance(thePlayer.followingKey.transform.position, transform.position) < 0.1f)
-            {
-                waitingToOpen = false;
+            waitingToOpen = false;
+            doorOpen = true;
+            AnimKeyOpen.SetTrigger("OpenDoor");
+            StartCoroutine(Opened());
+            collectEffect.Play();
+            List<Key> keysToRemove = new List<Key>();
 
-                doorOpen = true;
-                AnimKeyOpen.SetTrigger("OpenDoor");
-				StartCoroutine(Opened());
-                collectEffect.Play(); 
+            foreach (Key key in thePlayer.followingKeys)
+            {
+                if (key.keyID == doorID)
+                {
+                    key.gameObject.SetActive(false);
+                    thePlayer.RemoveKey(key);
+                    keysToRemove.Add(key);
+                    key.keyDoorOpened = true;
+                }
+            }
+
+            foreach (Key key in keysToRemove)
+            {
+                thePlayer.followingKeys.Remove(key);
             }
         }
-        if (doorOpen && Vector3.Distance(thePlayer.transform.position, transform.position) < 1f && Input.GetAxis("Vertical") > 0.1f)
-            {
-                SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-            }
+
+        if (doorOpen && Vector3.Distance(thePlayer.transform.position, transform.position) < 1f && PlayerMovement2D.PlayerMovement2Dinstance.vertical > 0.1f)
+        {
+            SceneManager.LoadScene(nameSceneToLoad);
+        }
     }
-	
-	IEnumerator Opened()
+
+    IEnumerator Opened()
     {
-		yield return new WaitForSeconds(seconds);
-		
+        yield return new WaitForSeconds(seconds);
+        DataPersistenceManager.instance.SaveGame();
         theSR.sprite = doorOpenSprite;
-        thePlayer.followingKey.gameObject.SetActive(false);    
-        thePlayer.followingKey = null;
-	}
+    }
+
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if(other.tag == "Player")
+        if (other.CompareTag("Player"))
         {
-            if(thePlayer.followingKey != null)
+            foreach (Key key in thePlayer.followingKeys)
             {
-                thePlayer.followingKey.followTarget = transform;
-                waitingToOpen = true;
+                if (key.keyID == doorID)
+                {
+                    waitingToOpen = true;
+                    break;
+                }
             }
         }
+    }
+
+    public void LoadData(GameData data)
+    {
+        data.doorsOpened.TryGetValue(id, out doorOpen);
+        if (doorOpen)
+        {
+            AnimKeyOpen.SetTrigger("OpenDoor");
+            StartCoroutine(Opened());
+        }
+    }
+
+    public void SaveData(GameData data)
+    {
+        if (data.doorsOpened.ContainsKey(id))
+        {
+            data.doorsOpened.Remove(id);
+        }
+        data.doorsOpened.Add(id, doorOpen);
     }
 }

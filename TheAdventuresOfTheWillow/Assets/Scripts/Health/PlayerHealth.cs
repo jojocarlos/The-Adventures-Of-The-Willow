@@ -31,7 +31,11 @@ public class PlayerHealth : MonoBehaviour, IDataPersistence
     public float toDie = 1f;
 
     //Pos
-    public Vector3 initialPos;
+    public Vector3 playerPosInWorld1;
+    public Vector3 playerPosInWorld2;
+    public bool isWorld1;
+    public bool isWorld2;
+
 
     void Start()
     {
@@ -40,7 +44,6 @@ public class PlayerHealth : MonoBehaviour, IDataPersistence
             PlayerHealthInstance = this;
         }
        
-        transform.position = initialPos; 
 
         currentHealth = maxHealth;
         healthbar.SetMaxHealth(maxHealth);
@@ -48,6 +51,14 @@ public class PlayerHealth : MonoBehaviour, IDataPersistence
         playerAnimations = GetComponent <PlayerAnimations>();
 
         DataPersistenceManager.instance.LoadGame();
+        if(isWorld1)
+        {
+            transform.position = playerPosInWorld1;
+        }
+        if (isWorld2)
+        {
+            transform.position = playerPosInWorld2;
+        }
     }
 
     void Update()
@@ -124,7 +135,16 @@ public class PlayerHealth : MonoBehaviour, IDataPersistence
         if (col.gameObject.CompareTag("Checkpoint"))
         {
             playerAnimations.PlayerStart();
-            initialPos = col.gameObject.transform.position;
+            //initialPos = col.gameObject.transform.position;
+            if(isWorld1)
+            {
+                playerPosInWorld1 = col.gameObject.transform.position; 
+            }
+            if (isWorld2)
+            {
+                playerPosInWorld2 = col.gameObject.transform.position;
+            }
+            DataPersistenceManager.instance.SaveGame();
             col.GetComponent<Animator>().SetTrigger("appear");
         }
 
@@ -198,7 +218,14 @@ public class PlayerHealth : MonoBehaviour, IDataPersistence
     {
         canDamage = false;
         //mudo a posiçao do personagem
-        transform.position = initialPos;
+        if(isWorld1)
+        {
+            transform.position = playerPosInWorld1;
+        }
+        if (isWorld2)
+        {
+            transform.position = playerPosInWorld2;
+        }
         //recuperar vida
         currentHealth = maxHealth;
         healthbar.SetMaxHealth(maxHealth);
@@ -219,11 +246,19 @@ public class PlayerHealth : MonoBehaviour, IDataPersistence
     public void LoadData(GameData data)
     {
         this.currentHealth = data.currentHealth;
+        this.isWorld1 = data.isWorld1;
+        this.isWorld2 = data.isWorld2;
+        this.playerPosInWorld1 = data.playerPosInWorld1;
+        this.playerPosInWorld2 = data.playerPosInWorld2;
     }
 
     public void SaveData(GameData data)
     {
         data.currentHealth = this.currentHealth;
+        data.isWorld1 = this.isWorld1;
+        data.isWorld2 = this.isWorld2;
+        data.playerPosInWorld1 = this.playerPosInWorld1;
+        data.playerPosInWorld2 = this.playerPosInWorld2;
     }
 
     private void OnTriggerStay2D(Collider2D col)

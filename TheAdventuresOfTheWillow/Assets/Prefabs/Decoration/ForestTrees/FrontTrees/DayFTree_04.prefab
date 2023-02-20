@@ -96,7 +96,7 @@ GameObject:
   - component: {fileID: 7567147451417453005}
   m_Layer: 0
   m_Name: SunSpot
-  m_TagString: Untagged
+  m_TagString: SunSpots
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2118,7 +2118,7 @@ GameObject:
   - component: {fileID: 5171044035669845810}
   m_Layer: 0
   m_Name: SunSpot (2)
-  m_TagString: Untagged
+  m_TagString: SunSpots
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3843,7 +3843,7 @@ GameObject:
   - component: {fileID: 4721236354319441147}
   m_Layer: 0
   m_Name: SunSpot (1)
-  m_TagString: Untagged
+  m_TagString: SunSpots
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

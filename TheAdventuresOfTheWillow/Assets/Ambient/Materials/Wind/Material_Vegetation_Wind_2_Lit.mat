@@ -8,8 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Material_Vegetation_Wind_2_Lit
-  m_Shader: {fileID: -6465566751694194690, guid: 408da5ee58f729347a6e0edbd03bee89,
-    type: 3}
+  m_Shader: {fileID: -6465566751694194690, guid: 408da5ee58f729347a6e0edbd03bee89, type: 3}
   m_ValidKeywords: []
   m_InvalidKeywords:
   - ETC1_EXTERNAL_ALPHA
@@ -54,6 +53,6 @@ Material:
     - Vector1_7AA64B76: 0
     m_Colors:
     - Color_3C5F263D: {r: 1, g: 0.8718326, b: 0.33490568, a: 1}
-    - RimColor: {r: 0.6415094, g: 0.5047918, b: 0.20274118, a: 1}
+    - RimColor: {r: 0.6431373, g: 0.62352943, b: 0.08627451, a: 1}
     - Vector2_AB971143: {r: 2, g: -0.2, b: 0, a: 0}
   m_BuildTextureStacks: []

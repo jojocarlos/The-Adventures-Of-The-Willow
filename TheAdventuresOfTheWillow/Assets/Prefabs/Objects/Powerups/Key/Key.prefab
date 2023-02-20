@@ -46,6 +46,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af70744878642324ca5eb140c2c3c0da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  keyID: 1
   followSpeed: 3
   followTarget: {fileID: 0}
   Anim: {fileID: 4795071419102978385}

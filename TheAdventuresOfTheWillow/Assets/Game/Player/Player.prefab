@@ -677,8 +677,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   KeyFollowPoint: {fileID: 6674886891568465438}
-  followingKey: {fileID: 0}
   followingSpirit: {fileID: 0}
+  followingKeys: []
 --- !u!114 &2066404367309902287
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -738,7 +738,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projectile: {fileID: 6643729944317828483, guid: e595087b05027c64bb009a7a8b1ce58d, type: 3}
-  velocity: {x: 9, y: -7}
+  velocity: {x: 5, y: -5}
   offset: {x: 2, y: 0.2}
   cooldown: 0.4
   powers: {fileID: 2066404367309902275}
@@ -754,11 +754,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d67617b72bdbe094b903ab9caaedff5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isNormal: 1
-  isFirePlayer: 0
+  isNormal: 0
+  isFirePlayer: 1
   isBubblePlayer: 0
   isAirPlayer: 0
-  isPowered: 0
+  isPowered: 1
   PlayerAnimator: {fileID: 2066404366215545010}
 --- !u!114 &2066404367309902272
 MonoBehaviour:

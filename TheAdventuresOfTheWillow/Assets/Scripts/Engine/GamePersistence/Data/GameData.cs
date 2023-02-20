@@ -23,6 +23,12 @@ public class GameData
 	public int intID;
 	public int deathCount;
 
+    //Player Position worlds
+    public bool isWorld1;
+    public bool isWorld2;
+    public Vector3 playerPosInWorld1;
+    public Vector3 playerPosInWorld2;
+
     //Player position
     public Vector3 playerPosition;
 
@@ -32,7 +38,12 @@ public class GameData
 	public int FireFlowerQuantity;
 	public int InvincibleFlowerQuantity;
 
-    //public SerializableDictionary<string, bool> coinsCollected;
+    public SerializableDictionary<string, bool> coinsCollected;
+    public SerializableDictionary<string, bool> doorsOpened;
+    public SerializableDictionary<string, bool> keyDoorOpened;
+    public SerializableDictionary<string, Vector3> ObjectsPosition;
+    public SerializableDictionary<string, bool> ObjectsPositionBool;
+
     //public AttributesData playerAttributesData;
 
     public GameData()
@@ -46,7 +57,11 @@ public class GameData
 		this.Gem = 0;
         this.currentHealth = 100;
 
-        //Player position
+        //Player position World
+        playerPosInWorld1 = Vector3.zero;
+        playerPosInWorld2 = Vector3.zero;
+        this.isWorld1 = true;
+        this.isWorld2 = false;
         playerPosition = Vector3.zero;
 
         //PlayerStates
@@ -56,7 +71,11 @@ public class GameData
 		this.isAirPlayer = false;
 		this.isPowered = false;
 		
-        //coinsCollected = new SerializableDictionary<string, bool>();
+        coinsCollected = new SerializableDictionary<string, bool>();
+        doorsOpened = new SerializableDictionary<string, bool>();
+        keyDoorOpened = new SerializableDictionary<string, bool>();
+        ObjectsPosition = new SerializableDictionary<string, Vector3>();
+        ObjectsPositionBool = new SerializableDictionary<string, bool>();
         //playerAttributesData = new AttributesData();
         //WorldShop
         this.Bought1 = true;
