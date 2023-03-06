@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="ParameterPreset" id="{725a3e8e-f05c-4b5a-a7da-31801f726f39}">
+		<property name="name">
+			<value>FightMusic</value>
+		</property>
+		<relationship name="folder">
+			<destination>{dad2f27a-60ec-472b-902a-5f590405ba35}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{f11c321d-17ed-407d-a992-a92735a209c4}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{f11c321d-17ed-407d-a992-a92735a209c4}">
+		<property name="parameterType">
+			<value>2</value>
+		</property>
+		<property name="maximum">
+			<value>3</value>
+		</property>
+		<property name="enumerationLabels">
+			<value>SpiderBoss</value>
+			<value>WerewolfBoss01</value>
+			<value>WerewolfBoss02</value>
+		</property>
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+	</object>
+</objects>

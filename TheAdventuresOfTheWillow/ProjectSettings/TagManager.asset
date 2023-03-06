@@ -40,13 +40,15 @@ TagManager:
   - EnemyPlatform
   - CinemachineCamera
   - Spirit
-  - BossEnter
   - waterTop
   - Shot
   - GroundPlatform
   - Setters
   - SunSpots
   - Lights
+  - Background
+  - TriggerFunctionSelector
+  - SpiderBoss
   layers:
   - Default
   - TransparentFX

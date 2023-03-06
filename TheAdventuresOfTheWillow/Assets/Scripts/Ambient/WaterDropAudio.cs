@@ -10,16 +10,6 @@ public class WaterDropAudio : MonoBehaviour
 
         Vector2 splashLocation = hit.point;
         
-        Camera MainCam = FindObjectOfType<Camera>();
-
-        Vector3 screenPoint = MainCam.WorldToViewportPoint(splashLocation);
-
-        bool onScreen = screenPoint.x > 0 &&
-                        screenPoint.x < 1 && 
-                        screenPoint.y > 0 &&
-                        screenPoint.y < 1;
-
-        if(onScreen)
-            FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/Ambience/Water/WaterDrops", splashLocation);
+        AudioManager.instance.PlayOneShot(FMODEvents.instance.WaterDrops, splashLocation);
     }
 }

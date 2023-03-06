@@ -4,86 +4,105 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Events;
 using TMPro;
+using System.IO;
 
 public class ResolutionSettings : MonoBehaviour
 {
     public TMPro.TMP_Dropdown ResolutionDropdown;
+    public Toggle fullScreenToggle;
 
-    Resolution[] resolutions;
-	const string resName = "resolutionoption";
-	
-	public Toggle fullScreenToggle;
-	private int screenInt;
+    private Resolution[] resolutions;
+    private int currentResolutionIndex;
     private bool isFullScreen;
-	
-    void Awake()
-	{
-		screenInt = PlayerPrefs.GetInt("FullScreen");
-		
-		if(screenInt == 1)
-		{
-			fullScreenToggle.isOn = true;
-		}
-		if(screenInt == 0)
-		{
-			fullScreenToggle.isOn = false;
-		}
-		
-		
-		ResolutionDropdown.onValueChanged.AddListener(new UnityAction<int>(index =>
-		{
-			PlayerPrefs.SetInt(resName, ResolutionDropdown.value);
-			PlayerPrefs.Save();
-		}));
-	}
-	
-	public void SetFullScreen(bool isFullScreen)
-	{
-		if(fullScreenToggle.isOn)
-		{
-			PlayerPrefs.SetInt("FullScreen", 1);
-			isFullScreen = true;
-		}
-		if(!fullScreenToggle.isOn)
-		{
-			PlayerPrefs.SetInt("FullScreen", 0);
-			isFullScreen = false;
-		}
-		Screen.fullScreen = isFullScreen;
-    }
-	
-    void Start()
-    {
-		
-        resolutions = Screen.resolutions;
-        ResolutionDropdown.ClearOptions();
 
+    private const string jsonFileName = "resolutionSettings.json";
+    private ResolutionSettingsData resolutionSettingsData = new ResolutionSettingsData();
+
+    [System.Serializable]
+    private class ResolutionSettingsData
+    {
+        public int resolutionIndex;
+        public bool isFullScreen;
+    }
+
+    private void Awake()
+    {
+        LoadResolutionSettings();
+
+        ResolutionDropdown.onValueChanged.AddListener(new UnityAction<int>(index =>
+        {
+            resolutionSettingsData.resolutionIndex = index;
+            SaveResolutionSettings();
+        }));
+
+        fullScreenToggle.onValueChanged.AddListener(new UnityAction<bool>(value =>
+        {
+            resolutionSettingsData.isFullScreen = value;
+            SaveResolutionSettings();
+            SetFullScreen(value);
+        }));
+    }
+
+    private void Start()
+    {
+        resolutions = Screen.resolutions;
+
+        ResolutionDropdown.ClearOptions();
         List<string> options = new List<string>();
 
-        int currentResolutionIndex = 0;
         for (int i = 0; i < resolutions.Length; i++)
         {
             string option = resolutions[i].width + " x " + resolutions[i].height + " " + resolutions[i].refreshRate + "Hz";
             options.Add(option);
 
-            if (resolutions[i].width == Screen.currentResolution.width && 
-                resolutions[i].height == Screen.currentResolution.height && 
-				resolutions[i].refreshRate == Screen.currentResolution.refreshRate)
+            if (resolutions[i].width == Screen.currentResolution.width &&
+                resolutions[i].height == Screen.currentResolution.height &&
+                resolutions[i].refreshRate == Screen.currentResolution.refreshRate)
             {
                 currentResolutionIndex = i;
             }
         }
 
         ResolutionDropdown.AddOptions(options);
-        ResolutionDropdown.value = PlayerPrefs.GetInt(resName, currentResolutionIndex);
+        ResolutionDropdown.value = resolutionSettingsData.resolutionIndex;
         ResolutionDropdown.RefreshShownValue();
+
+        SetFullScreen(resolutionSettingsData.isFullScreen);
     }
 
-    public void SetResolution (int resolutionIndex)
+    private void SetFullScreen(bool value)
     {
-        Resolution resolution = resolutions[resolutionIndex];
-
-        Screen.SetResolution(resolution.width, resolution.height, Screen.fullScreen);
+        isFullScreen = value;
+        Screen.fullScreen = isFullScreen;
     }
-	
+
+    private void SaveResolutionSettings()
+    {
+        string path = Application.persistentDataPath + "/Configurations";
+        if (!Directory.Exists(path))
+        {
+            Directory.CreateDirectory(path);
+        }
+
+        string json = JsonUtility.ToJson(resolutionSettingsData);
+        File.WriteAllText(path + "/" + jsonFileName, json);
+    }
+
+    private void LoadResolutionSettings()
+    {
+        string filePath = Application.persistentDataPath + "/Configurations/" + jsonFileName;
+        if (File.Exists(filePath))
+        {
+            string json = File.ReadAllText(filePath);
+            resolutionSettingsData = JsonUtility.FromJson<ResolutionSettingsData>(json);
+        }
+        else
+        {
+            resolutionSettingsData.resolutionIndex = currentResolutionIndex;
+            resolutionSettingsData.isFullScreen = Screen.fullScreen;
+
+            SaveResolutionSettings();
+        }
+    }
 }
+

@@ -85,7 +85,7 @@ public class PlayerHealth : MonoBehaviour, IDataPersistence
         healthbar.SetHealth(currentHealth);
     }
 
-    void TakeDamage(int damage)
+    public void TakeDamage(int damage)
     {
         currentHealth -= damage;
 

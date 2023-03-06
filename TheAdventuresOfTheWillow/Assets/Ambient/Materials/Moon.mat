@@ -54,25 +54,16 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - PixelSnap: 0
-    - _AlphaThreshold: 0
     - _EnableExternalAlpha: 0
-    - _GlowIntensity: 0
-    - _GlowPower: 1
-    - _InnerGlowSize: 1
-    - _IsOutlineEnabled: 0
-    - _OuterGlowSize: 1
-    - _OutlineSize: 1
-    - _Softness: 0.66
-    - _Thicc: 0.95
-    - _Threshold: 0.5
+    - _Origin: 2.42
+    - _QueueControl: 0
+    - _QueueOffset: 0
+    - _Spreed: 0.37
+    - _XMax: 1.67
+    - _XMin: 1
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _Flip: {r: 1, g: 1, b: 1, a: 1}
-    - _GlowColor: {r: 2.3245065, g: 2.3245065, b: 2.3245065, a: 1}
-    - _InnerGlowColor: {r: 1, g: 1, b: 1, a: 1}
-    - _Offset: {r: 0, g: 0, b: 0, a: 0}
-    - _OuterGlowColor: {r: 1, g: 1, b: 1, a: 1}
-    - _OutlineColor: {r: 1, g: 1, b: 1, a: 1}
+    - _GlowColor: {r: 0.059460416, g: 0.06403429, b: 0.02744327, a: 0}
     - _RendererColor: {r: 1, g: 1, b: 1, a: 1}
   m_BuildTextureStacks: []

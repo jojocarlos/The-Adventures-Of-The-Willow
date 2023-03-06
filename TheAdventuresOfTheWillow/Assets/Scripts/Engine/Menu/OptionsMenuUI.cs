@@ -7,48 +7,74 @@ using UnityEngine.InputSystem;
 
 public class OptionsMenuUI : MonoBehaviour
 {
-    [SerializeField] private GameObject OptionsMenu;
-    [SerializeField] private bool isPaused;
-    public CursorManager cursorManager;
+    [SerializeField] private GameObject escapeMenu;
+    [SerializeField] private GameObject mapMenu;
+    [SerializeField] private GameObject volumeObj;
+
+    private bool isPaused;
+
+    void Start()
+    {
+        isPaused = false;
+        escapeMenu.SetActive(false);
+        mapMenu.SetActive(false); 
+        volumeObj.SetActive(false);
+    }
 
     public void EscapeMenu(InputAction.CallbackContext context)
-	{
+    {
         if (context.performed)
-     	{
-			isPaused = !isPaused;
+        {
+            if (mapMenu.activeSelf)
+            {
+                mapMenu.SetActive(false);
+                volumeObj.SetActive(false);
+                isPaused = false;
+                Time.timeScale = 1;
+                CursorManager.cursorManagerInstance.cursorDisappear();
+            }
+            else if (escapeMenu.activeSelf)
+            {
+                Resume();
+            }
+            else
+            {
+                isPaused = true;
+                Time.timeScale = 0;
+                escapeMenu.SetActive(true);
+                volumeObj.SetActive(true);
+                CursorManager.cursorManagerInstance.cursorAppear();
+            }
         }
     }
 
-
-    private void Update()
+    public void MapMenu(InputAction.CallbackContext context)
     {
-		/*/
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (context.performed)
         {
-            isPaused = !isPaused;
-        }*/
-        if (isPaused)
-        {
-            ActivateMenu();
-        }
-        else
-        {
-            DeactivateMenu();
+            if (escapeMenu.activeSelf)
+            {
+                Resume();
+            }
+            else
+            {
+                isPaused = true;
+                volumeObj.SetActive(true);
+                Time.timeScale = 0;
+                mapMenu.SetActive(true);
+                CursorManager.cursorManagerInstance.cursorAppear();
+            }
         }
     }
 
-    public void ActivateMenu()
+    public void Resume()
     {
-        Time.timeScale = 0;
-        OptionsMenu.SetActive(true);
-        cursorManager.cursorAppear();
-    }
-    public void DeactivateMenu()
-    {
-        Time.timeScale = 1;
-        OptionsMenu.SetActive(false);
         isPaused = false;
-        cursorManager.cursorDisappear();
+        volumeObj.SetActive(false);
+        Time.timeScale = 1;
+        escapeMenu.SetActive(false);
+        mapMenu.SetActive(false);
+        CursorManager.cursorManagerInstance.cursorDisappear();
     }
 
 }

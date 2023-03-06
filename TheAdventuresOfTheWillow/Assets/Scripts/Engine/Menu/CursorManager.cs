@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class CursorManager : MonoBehaviour
 {
+	public static CursorManager cursorManagerInstance;
+
 	[SerializeField] private bool CursorLockedVar;
 	
     // Start is called before the first frame update
@@ -12,6 +14,10 @@ public class CursorManager : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
 		Cursor.visible = (false);
 		CursorLockedVar = (false);
+		if(cursorManagerInstance == null)
+		{
+			cursorManagerInstance = this;
+		}
     }
 
     // Update is called once per frame

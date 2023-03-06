@@ -16673,10 +16673,9 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1843003467}
-  - {fileID: 1990483660}
   - {fileID: 1924180239}
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1779456282
 GameObject:
@@ -17183,7 +17182,6 @@ MonoBehaviour:
   parameterValue: 0
   menuParameterName: MenuMusic
   menuParameterValue: 1
-  isPlay: 0
 --- !u!1 &1850306609
 GameObject:
   m_ObjectHideFlags: 0
@@ -17751,7 +17749,7 @@ Transform:
   m_Children:
   - {fileID: 615612798}
   m_Father: {fileID: 1762758919}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1924180240
 MonoBehaviour:
@@ -18602,13 +18600,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1990483659}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1762758919}
-  m_RootOrder: 1
+  m_Father: {fileID: 0}
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1990483661
 MonoBehaviour:
@@ -18624,6 +18622,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textPressed: {fileID: 401207066}
   Buttons: {fileID: 809119795}
+  Anim: {fileID: 1860583579}
 --- !u!1001 &2003718110
 PrefabInstance:
   m_ObjectHideFlags: 0

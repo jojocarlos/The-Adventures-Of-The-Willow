@@ -12,8 +12,7 @@ public class SaveSlot : MonoBehaviour
     [Header("Content")]
     [SerializeField] private GameObject noDataContent;
     [SerializeField] private GameObject hasDataContent;
-    //[SerializeField] private TextMeshProUGUI percentageCompleteText;
-	[SerializeField] private TextMeshProUGUI CoinText;
+    [SerializeField] private TextMeshProUGUI percentageCompleteText;
     [SerializeField] private TextMeshProUGUI deathCountText;
 
     [Header("Clear Data Button")]
@@ -23,15 +22,15 @@ public class SaveSlot : MonoBehaviour
 
     private Button saveSlotButton;
 
-    private void Awake()
+    private void Awake() 
     {
         saveSlotButton = this.GetComponent<Button>();
     }
 
-    public void SetData(GameData data)
+    public void SetData(GameData data) 
     {
         // there's no data for this profileId
-        if (data == null)
+        if (data == null) 
         {
             hasData = false;
             noDataContent.SetActive(true);
@@ -39,7 +38,7 @@ public class SaveSlot : MonoBehaviour
             clearButton.gameObject.SetActive(false);
         }
         // there is data for this profileId
-        else
+        else 
         {
             hasData = true;
             noDataContent.SetActive(false);
@@ -47,12 +46,11 @@ public class SaveSlot : MonoBehaviour
             clearButton.gameObject.SetActive(true);
 
             //percentageCompleteText.text = data.GetPercentageComplete() + "% COMPLETE";
-			CoinText.text = ("" + data.coin);
             deathCountText.text = "DEATH COUNT: " + data.deathCount;
         }
     }
 
-    public string GetProfileId()
+    public string GetProfileId() 
     {
         return this.profileId;
     }

@@ -3368,7 +3368,7 @@ AnimationClip:
     intParameter: 0
     messageOptions: 0
   - time: 2.5166667
-    functionName: FlipLeft
+    functionName: FlifLeft
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0

@@ -28,7 +28,7 @@
 	<object class="LowpassEffect" id="{a27cc395-6bc3-4509-98a9-f18cb2f1b2ad}" />
 	<object class="MixerSend" id="{5dbfbe7c-3625-4ac4-94fd-57397edcd3f1}">
 		<property name="inputFormat">
-			<value>1</value>
+			<value>2</value>
 		</property>
 		<relationship name="mixerReturn">
 			<destination>{12de840b-6085-45a3-b7f1-26d42a3bb328}</destination>

@@ -5,46 +5,10 @@ using UnityEngine;
 
 public class BGMusic : MonoBehaviour
 {
-    public static BGMusic instance;
-    [SerializeField] private MenuMusicArea area;
-    [SerializeField] private MusicArea musicarea;
-
-    [Header("Parameter Change")]
-    [SerializeField] private string parameterName;
-    [SerializeField] private float parameterValue;
-    [Header("Menu Parameter Change")]
-    [SerializeField] private string menuParameterName;
-    [SerializeField] private float menuParameterValue;
-    bool isPlay;
-
-    private void Awake()
-    {
-        if (instance != null && instance != this) {
-            Destroy(this.gameObject);
-            return;
-        } else {
-            instance = this;
-        }
-        DontDestroyOnLoad(this.gameObject);
-    }
+    //Normal Music Game starts and area started 1
     private void Start()
     {
-        if(!isPlay)
-        {
-            isPlay = true;
-            AudioManager.instance.SetMusicMenuArea(area);
-            AudioManager.instance.SetMusicArea(musicarea);
-        }
-    }
-
-    void Update()
-    {
-        AudioManager.instance.SetMusicAreaParameter(parameterName, parameterValue);
-        AudioManager.instance.SetMusicMenuAreaParameter(menuParameterName, menuParameterValue);
-    }
-
-    public void destroyObject()
-    {
-        Destroy(gameObject);
+        AudioManager.instance.InitializeMusic(FMODEvents.instance.music);
+        AudioManager.instance.SetMusicAreaParameter("GameMusic", 1);
     }
 }

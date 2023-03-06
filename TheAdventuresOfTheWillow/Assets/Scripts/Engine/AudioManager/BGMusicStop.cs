@@ -6,6 +6,5 @@ public class BGMusicStop : MonoBehaviour
 {
     void Awake()
     {
-        BGMusic.instance.destroyObject();
     }
 }

@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 
@@ -32,6 +33,13 @@ public class GameData
     //Player position
     public Vector3 playerPosition;
 
+    //Abilities
+    public bool hasDash;
+    public bool hasSwimming;
+    public float coyoteTimeLevel;
+    public float coyoteTimeBufferLevel;
+    public int dashAmountLevel;
+
     //Shop Items
     public int AirFlowerQuantity;
 	public int BubbleFlowerQuantity;
@@ -44,17 +52,22 @@ public class GameData
     public SerializableDictionary<string, Vector3> ObjectsPosition;
     public SerializableDictionary<string, bool> ObjectsPositionBool;
 
+    //GameStates and bosses Defeated
+    public bool isSpiritFollowing;
+    public bool spiderBossDefeat;
+    public bool SpiderFinalStarted;
+
     //public AttributesData playerAttributesData;
 
     public GameData()
     {
-		//Localization ID
-		this.intID = 0;
-		
+        //Localization ID
+        this.intID = 0;
+
         //GamePlayerData
-		this.deathCount = 0;
+        this.deathCount = 0;
         this.coin = 0;
-		this.Gem = 0;
+        this.Gem = 0;
         this.currentHealth = 100;
 
         //Player position World
@@ -66,17 +79,24 @@ public class GameData
 
         //PlayerStates
         this.isNormal = true;
-		this.isFirePlayer = false;
-		this.isBubblePlayer = false;
-		this.isAirPlayer = false;
-		this.isPowered = false;
-		
+        this.isFirePlayer = false;
+        this.isBubblePlayer = false;
+        this.isAirPlayer = false;
+        this.isPowered = false;
+
         coinsCollected = new SerializableDictionary<string, bool>();
         doorsOpened = new SerializableDictionary<string, bool>();
         keyDoorOpened = new SerializableDictionary<string, bool>();
         ObjectsPosition = new SerializableDictionary<string, Vector3>();
         ObjectsPositionBool = new SerializableDictionary<string, bool>();
         //playerAttributesData = new AttributesData();
+
+        //abilities
+        this.hasSwimming = false;
+        this.coyoteTimeLevel = 0;
+        this.dashAmountLevel = 0;
+        this.coyoteTimeBufferLevel = 0.2f;
+
         //WorldShop
         this.Bought1 = true;
         this.Bought2 = false;
@@ -84,14 +104,19 @@ public class GameData
 
         //Levels
         this.releasedLevelStatic = 1;
-		
-		//Shop items quantity
-		this.AirFlowerQuantity = 0;
-		this.BubbleFlowerQuantity = 0;
-		this.FireFlowerQuantity = 0;
-		this.InvincibleFlowerQuantity = 0;
 
-    }
+        //Shop items quantity
+        this.AirFlowerQuantity = 0;
+        this.BubbleFlowerQuantity = 0;
+        this.FireFlowerQuantity = 0;
+        this.InvincibleFlowerQuantity = 0;
+
+
+        //GameStates and bosses Defeated
+        this.isSpiritFollowing = false;
+        this.spiderBossDefeat = false;
+        this.SpiderFinalStarted = false;
+}
 
     /*/
     public int GetPercentageComplete()

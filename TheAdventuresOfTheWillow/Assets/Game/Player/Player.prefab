@@ -276,6 +276,7 @@ GameObject:
   - component: {fileID: 2066404367309902272}
   - component: {fileID: 2066404367309902273}
   - component: {fileID: 410625485507206723}
+  - component: {fileID: 4228784388006729638}
   m_Layer: 3
   m_Name: Player
   m_TagString: Player
@@ -606,6 +607,7 @@ MonoBehaviour:
   KnockBackCount: 0
   KnockBackLength: 0.2
   KnockFromRight: 0
+  playerInput: {fileID: 2066404367309902330}
 --- !u!114 &2066404367309902276
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -635,6 +637,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc695b019a98d9b408fbc1ac5612f923, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animationPlayer: {fileID: 0}
 --- !u!114 &2066404367309902280
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -827,7 +830,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 100
-  currentHealth: 0
+  currentHealth: 100
   healthbar: {fileID: 0}
   DCI: {fileID: 0}
   playerColor: {fileID: 2066404366215545009}
@@ -835,7 +838,33 @@ MonoBehaviour:
   powers: {fileID: 2066404367309902275}
   isInvinciblePower: 0
   toDie: 1
-  initialPos: {x: 0, y: 0, z: 0}
+  playerPosInWorld1: {x: 0, y: 0, z: 0}
+  playerPosInWorld2: {x: 0, y: 0, z: 0}
+  isWorld1: 0
+  isWorld2: 0
+--- !u!114 &4228784388006729638
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2066404367309902305}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a16208358beaff49935a6c741958c46, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Data: {fileID: 11400000, guid: f4f40d643214f51468b2f79845a6d929, type: 2}
+  hasSwimming: 0
+  coyoteTimeLevel: 0
+  itemCounter: 0
+  coyoteTimeIncrease: 0.1
+  coyoteTimeBufferLevel: 0.2
+  itemBufferCounter: 0
+  coyoteTimeBufferIncrease: 0.1
+  dashAmountLevel: 0
+  itemDashCounter: 0
+  dashAmountIncrease: 1
 --- !u!1 &2066404367681916814
 GameObject:
   m_ObjectHideFlags: 0

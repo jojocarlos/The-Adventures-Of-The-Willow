@@ -19,6 +19,7 @@ public class FMODEvents : MonoBehaviour
 
     [field: Header("Music")]
     [field: SerializeField] public EventReference music { get; private set; }
+    [field: SerializeField] public EventReference FightMusic { get; private set; }
     [field: SerializeField] public EventReference MenuMusic { get; private set; }
     [field: SerializeField] public EventReference Invinciblemusic { get; private set; }
 
@@ -57,6 +58,13 @@ public class FMODEvents : MonoBehaviour
     [field: Header("Bosses")]
     [field: Header("Spider")]
     [field: SerializeField] public EventReference SFX1 { get; private set; }
+    [field: SerializeField] public EventReference SFX2 { get; private set; }
+    [field: SerializeField] public EventReference SFX3 { get; private set; }
+    [field: SerializeField] public EventReference SFX4 { get; private set; }
+    [field: SerializeField] public EventReference SFX5 { get; private set; }
+    [field: SerializeField] public EventReference SFX6 { get; private set; }
+    [field: SerializeField] public EventReference SFX7 { get; private set; }
+    [field: SerializeField] public EventReference Talk { get; private set; }
 
 
     [field: Header("Big Fish")]

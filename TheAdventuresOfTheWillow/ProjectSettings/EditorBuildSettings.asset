@@ -21,6 +21,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Worlds/WorldSelect.unity
     guid: 29381ad267b0b8343b59c6d8b06bbdb1
   - enabled: 1
+    path: Assets/Scenes/Menu/Menu/LoadGameScreen.unity
+    guid: 39a7acd1d017ddc4588d694a810bf9c6
+  - enabled: 1
     path: Assets/Scenes/Worlds/World1/Levels/World01_Level1_PartA.unity
     guid: 3384671fd7ad6844c8bd6b06c414a841
   - enabled: 1

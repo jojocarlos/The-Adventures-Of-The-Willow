@@ -3,6 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 using FMODUnity;
 using FMOD.Studio;
+using System.IO;
+using UnityEngine.Rendering;
+
+[System.Serializable]
+public class AudioSettingsData
+{
+    public float masterVolume;
+    public float musicVolume;
+    public float ambienceVolume;
+    public float sfxVolume;
+}
 
 public class AudioManager : MonoBehaviour
 {
@@ -26,7 +37,11 @@ public class AudioManager : MonoBehaviour
 
     private EventInstance ambienceEventInstance;
     private EventInstance musicEventInstance;
+    private EventInstance FightMusicEventInstance;
     private EventInstance menuMusicEventInstance;
+
+    private const string jsonFileName = "audioSettings.json";
+    private AudioSettingsData audioSettingsData = new AudioSettingsData();
 
     public static AudioManager instance { get; private set; }
 
@@ -51,17 +66,13 @@ public class AudioManager : MonoBehaviour
         musicBus.setVolume(musicVolume);
         ambienceBus.setVolume(ambienceVolume);
         sfxBus.setVolume(SFXVolume);
-        masterVolume = PlayerPrefs.GetFloat("MASTER", masterVolume);
-        musicVolume = PlayerPrefs.GetFloat("MUSIC", musicVolume);
-        SFXVolume = PlayerPrefs.GetFloat("SFX", SFXVolume);
-        ambienceVolume = PlayerPrefs.GetFloat("AMBIENCE", ambienceVolume);
+
+        LoadSettings();
     }
 
     private void Start()
     {
         InitializeAmbience(FMODEvents.instance.ambience);
-        InitializeMusic(FMODEvents.instance.music);
-        InitializeMenuMusic(FMODEvents.instance.MenuMusic);
     }
 
     private void Update()
@@ -71,61 +82,111 @@ public class AudioManager : MonoBehaviour
         ambienceBus.setVolume(ambienceVolume);
         sfxBus.setVolume(SFXVolume);
     }
-
-    private void InitializeAmbience(EventReference ambienceEventReference)
+    //Start ambience, music, FightMusic, MenuMusic
+    public void InitializeAmbience(EventReference ambienceEventReference)
     {
         ambienceEventInstance = CreateInstance(ambienceEventReference);
         ambienceEventInstance.start();
     }
-
-    private void InitializeMusic(EventReference musicEventReference)
+    
+    public void InitializeMusic(EventReference musicEventReference)
     {
         musicEventInstance = CreateInstance(musicEventReference);
         musicEventInstance.start();
     }
+    public void InitializeFightMusic(EventReference FightMusicEventReference)
+    {
+        FightMusicEventInstance = CreateInstance(FightMusicEventReference);
+        FightMusicEventInstance.start();
+    }
 
-    private void InitializeMenuMusic(EventReference menuMusicEventReference)
+    public void InitializeMenuMusic(EventReference menuMusicEventReference)
     {
         menuMusicEventInstance = CreateInstance(menuMusicEventReference);
         menuMusicEventInstance.start();
     }
-    //ambience
+
+    //Stop ambience, music, FightMusic, MenuMusic
+    public void StopAmbience(EventReference ambienceEventReference)
+    {
+        ambienceEventInstance = CreateInstance(ambienceEventReference);
+        ambienceEventInstance.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
+    }
+
+    public void StopMusic(EventReference musicEventReference)
+    {
+        musicEventInstance = CreateInstance(musicEventReference);
+        musicEventInstance.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
+    }
+    public void StopFightMusic(EventReference FightMusicEventReference)
+    {
+        FightMusicEventInstance = CreateInstance(FightMusicEventReference);
+        FightMusicEventInstance.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
+    }
+
+    public void StopMenuMusic(EventReference menuMusicEventReference)
+    {
+        menuMusicEventInstance = CreateInstance(menuMusicEventReference);
+        menuMusicEventInstance.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
+    }
+
+
+    //ambience parameter name and value
     public void SetAmbienceParameter(string parameterName, float parameterValue)
     {
         ambienceEventInstance.setParameterByName(parameterName, parameterValue);
     }
 
-    //music
+
+    //music name to area
     public void SetMusicArea(MusicArea area)
     {
         musicEventInstance.setParameterByName("area", (float) area);
     }
+    //music parameter name and value
     public void SetMusicAreaParameter(string parameterName, float parameterValue)
     {
         musicEventInstance.setParameterByName(parameterName, parameterValue);
     }
+
+
     //menu music
     public void SetMusicMenuArea(MenuMusicArea MenuMusicChange)
     {
         musicEventInstance.setParameterByName("MusicMenuChange", (float)MenuMusicChange);
     }
+    //menu music parameter name and value
     public void SetMusicMenuAreaParameter(string parameterName, float parameterValue)
     {
         menuMusicEventInstance.setParameterByName(parameterName, parameterValue);
     }
 
-    //oneshot
+
+    //music name to area
+    public void SetFightMusicArea(FightMusicArea area)
+    {
+        FightMusicEventInstance.setParameterByName("area", (float)area);
+    }
+
+    //Fight music paramater name and value
+    public void SetFightMusicArea(string parameterName, float parameterValue)
+    {
+        FightMusicEventInstance.setParameterByName(parameterName, parameterValue);
+    }
+
+
+
+
+    //oneshot 3D pos
     public void PlayOneShot(EventReference sound, Vector3 worldPos)
     {
         RuntimeManager.PlayOneShot(sound, worldPos);
     }
+    //oneshot normal
     public void PlayOneShot(EventReference sound)
     {
         RuntimeManager.PlayOneShot(sound);
     }
-
-
-
 
 
     public EventInstance CreateInstance(EventReference eventReference)
@@ -163,18 +224,41 @@ public class AudioManager : MonoBehaviour
         CleanUp();
     }
 
-    public void ApplyChanges()
+    public void SaveSettings()
     {
-        PlayerPrefs.SetFloat("MASTER", masterVolume);
-        PlayerPrefs.SetFloat("MUSIC", musicVolume);
-        PlayerPrefs.SetFloat("SFX", SFXVolume);
-        PlayerPrefs.SetFloat("AMBIENCE", ambienceVolume);
+        audioSettingsData.masterVolume = masterVolume;
+        audioSettingsData.musicVolume = musicVolume;
+        audioSettingsData.ambienceVolume = ambienceVolume;
+        audioSettingsData.sfxVolume = SFXVolume;
+
+        string path = Application.persistentDataPath + "/Configurations";
+        if (!Directory.Exists(path))
+        {
+            Directory.CreateDirectory(path);
+        }
+
+        string json = JsonUtility.ToJson(audioSettingsData);
+        File.WriteAllText(path + "/" + jsonFileName, json);
     }
-    public void ResetChanges()
+
+    public void LoadSettings()
     {
-        PlayerPrefs.DeleteKey("MASTER");
-        PlayerPrefs.DeleteKey("MUSIC");
-        PlayerPrefs.DeleteKey("SFX");
-        PlayerPrefs.DeleteKey("AMBIENCE");
+
+        string filePath = Application.persistentDataPath + "/Configurations/" + jsonFileName;
+        if (File.Exists(filePath))
+        {
+            string json = File.ReadAllText(filePath);
+            audioSettingsData = JsonUtility.FromJson<AudioSettingsData>(json);
+
+            masterVolume = audioSettingsData.masterVolume;
+            musicVolume = audioSettingsData.musicVolume;
+            ambienceVolume = audioSettingsData.ambienceVolume;
+            SFXVolume = audioSettingsData.sfxVolume;
+        }
+        else
+        {
+            SaveSettings();
+        }
     }
+
 }

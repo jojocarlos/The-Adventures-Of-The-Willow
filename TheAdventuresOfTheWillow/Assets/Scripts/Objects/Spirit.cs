@@ -3,18 +3,16 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class Spirit : MonoBehaviour
+public class Spirit : MonoBehaviour, IDataPersistence
 {
     public static Spirit spiritInstance;
 
     //target player
-    private bool isFollowing;
+    public bool isSpiritFollowing;
 
     [SerializeField] private float _followSpeed = 1f;
     [SerializeField] private float _followBossSpeed = 2f;
     [SerializeField] private Transform _followTarget;
-
-    public Transform followTarget;
 
     //Sin & Con animation
     [SerializeField] private float frequency;
@@ -31,9 +29,8 @@ public class Spirit : MonoBehaviour
     [SerializeField] private float timetoattack = 2f;
     [SerializeField] private float timetoagain = 1f;
 
-    private bool attackpermited;
 
-    private Animator Anim;
+    [SerializeField] private Animator Anim;
 
     public void Action(InputAction.CallbackContext context)
     {
@@ -42,23 +39,33 @@ public class Spirit : MonoBehaviour
             isAttacking = true;
         }
     }
+    private void Awake()
+    {
+        if (isSpiritFollowing)
+        {
+            isSpiritFollowing = true;
+        }
+
+    }
 
     private void Start()
     {
         timetoattack = 2f;
         timetoagain = 1f;
 
-        if(spiritInstance == null)
+        if (spiritInstance == null)
         {
             spiritInstance = this;
         }
+        KeyFollow thePlayer = FindObjectOfType<KeyFollow>();
+        _followTarget = thePlayer.KeyFollowPoint;
+        thePlayer.followingSpirit = this;
 
-        Anim = GetComponent<Animator>();
     }
 
     private void Update()
     {
-        if(SpiderBoss.spiderBossInstance.isIdle && !isAttacking)
+        if (!isAttacking)
         {
             Anim.SetBool("ToAttack", true);
         }
@@ -66,11 +73,23 @@ public class Spirit : MonoBehaviour
         {
             Anim.SetBool("ToAttack", false);
         }
+        KeyFollow thePlayer = FindObjectOfType<KeyFollow>();
+        _followTarget = thePlayer.KeyFollowPoint;
+        thePlayer.followingSpirit = this;
+
+        GameObject spiderBossObject = GameObject.FindWithTag("SpiderBoss");
+        if (spiderBossObject == null)
+        {
+        }
+        else
+        {
+            BossTarget = spiderBossObject.transform;
+        }
     }
 
     private void FixedUpdate()
     {
-        if (isFollowing && !isAttacking)
+        if (isSpiritFollowing && !isAttacking)
         {
             // including cos to target position.x and sin to target position.y
             Vector3 targetPosition = new Vector3(_followTarget.position.x + Mathf.Cos(Time.time * _frequency) * _amplitude,
@@ -80,7 +99,7 @@ public class Spirit : MonoBehaviour
             transform.position = Vector3.Lerp(transform.position, targetPosition, _followSpeed * Time.deltaTime);
         }
 
-        if(isAttacking && SpiderBoss.spiderBossInstance.isIdle)
+        if (isAttacking)
         {
             if (isAttacked)
             {
@@ -93,13 +112,11 @@ public class Spirit : MonoBehaviour
                 Vector3 attackposition = new Vector3(BossTarget.position.x, BossTarget.position.y + Mathf.Sin(Time.time * frequencyAttack) * amplitudeAttack, BossTarget.position.z);
                 transform.position = Vector3.Lerp(transform.position, attackposition, _followBossSpeed * Time.deltaTime);
                 timetoagain -= 1 * Time.deltaTime;
-                if(!SpiderBoss.spiderBossInstance.isIdle)
-                {
-                    Anim.SetTrigger("Hurt");
-                }
+                Anim.SetTrigger("Hurt");
+
             }
         }
-        if(timetoattack <= 0)
+        if (timetoattack <= 0)
         {
             timetoattack = 0;
             isAttacked = false;
@@ -125,14 +142,23 @@ public class Spirit : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-            if (!isFollowing)
+            if (!isSpiritFollowing)
             {
                 KeyFollow thePlayer = FindObjectOfType<KeyFollow>();
-                followTarget = thePlayer.KeyFollowPoint;
-                isFollowing = true;
+                _followTarget = thePlayer.KeyFollowPoint;
+                isSpiritFollowing = true;
                 thePlayer.followingSpirit = this;
             }
         }
     }
 
+    public void LoadData(GameData data)
+    {
+        this.isSpiritFollowing = data.isSpiritFollowing;
+    }
+
+    public void SaveData(GameData data)
+    {
+        data.isSpiritFollowing = this.isSpiritFollowing;
+    }
 }

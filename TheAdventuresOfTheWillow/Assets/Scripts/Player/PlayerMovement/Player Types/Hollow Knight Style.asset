@@ -44,7 +44,7 @@ MonoBehaviour:
   doTurnOnWallJump: 0
   slideSpeed: 0.5
   slideAccel: 5
-  coyoteTime: 0.2
+  coyoteTime: 0.6
   jumpInputBufferTime: 0.2
   dashAmount: 1
   dashSpeed: 50
@@ -58,6 +58,3 @@ MonoBehaviour:
   speedladder: 8
   TrampolineJumpForce: 0
   jumpStompEnemy: 0
-  Raduis: 3
-  BashPower: 100
-  BashTime: 5

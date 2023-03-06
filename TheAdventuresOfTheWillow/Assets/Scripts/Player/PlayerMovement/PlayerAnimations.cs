@@ -4,11 +4,17 @@ using UnityEngine;
 
 public class PlayerAnimations : MonoBehaviour
 {
-    private Animator animationPlayer;
+    public static PlayerAnimations PlayerAnimationsInstance;
+
+    [HideInInspector]public Animator animationPlayer;
 
     private void Start()
     {
         animationPlayer = GetComponentInChildren<Animator>();
+        if(PlayerAnimationsInstance == null)
+        {
+            PlayerAnimationsInstance = this;
+        }
     }
 
     void Update()

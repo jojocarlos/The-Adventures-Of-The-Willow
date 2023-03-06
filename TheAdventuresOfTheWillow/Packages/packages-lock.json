@@ -1,5 +1,12 @@
 {
   "dependencies": {
+    "com.elringus.spriteglow": {
+      "version": "https://github.com/Elringus/SpriteGlow.git#package",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {},
+      "hash": "05442994ffb7f6c679f648d702cdf888bd8c01dc"
+    },
     "com.litefeel.bitmapfontimporter": {
       "version": "https://github.com/litefeel/Unity-BitmapFontImporter.git#3.3.0",
       "depth": 0,
@@ -58,7 +65,7 @@
     },
     "com.unity.2d.sprite": {
       "version": "1.0.0",
-      "depth": 1,
+      "depth": 0,
       "source": "builtin",
       "dependencies": {}
     },
@@ -76,7 +83,7 @@
     },
     "com.unity.2d.tilemap": {
       "version": "1.0.0",
-      "depth": 1,
+      "depth": 0,
       "source": "builtin",
       "dependencies": {}
     },
